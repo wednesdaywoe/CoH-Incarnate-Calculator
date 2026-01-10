@@ -1569,14 +1569,13 @@ function updateComponentsList() {
         const trackingKey = `total-${name}`;
         
         return `
-            <div class="component-row ${isCompleted ? 'reduced' : ''}" data-component="${trackingKey}" data-original="${originalQty}" title="Left-click to add by 1, right-click to remove by 1">
+            <div class="component-row ${isCompleted ? 'reduced' : ''}" data-original="${originalQty}" title="Track components in individual slot panels below">
                 <span class="component-name component-${data.rarity}">${displayQty}x ${name}</span>
             </div>
         `;
     }).join('');
     
-    // Attach event listeners
-    attachComponentListeners(listEl);
+    // Note: Totals list is read-only. Track components in individual slot panels.
 }
 
 // Component data - fetched dynamically per node
