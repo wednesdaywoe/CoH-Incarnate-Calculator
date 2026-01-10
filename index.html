@@ -2394,22 +2394,34 @@ function confirmSelection() {
 
 // Attach event listeners for component checklist functionality
 function attachComponentListeners(container) {
-    // Use event delegation - attach listeners to the container itself
-    container.addEventListener('click', (e) => {
+    // Store listener functions on the container to allow removal later
+    if (container._clickListener) {
+        container.removeEventListener('click', container._clickListener);
+    }
+    if (container._contextListener) {
+        container.removeEventListener('contextmenu', container._contextListener);
+    }
+    
+    // Define and store listener functions
+    container._clickListener = (e) => {
         const row = e.target.closest('.component-row[data-component]');
         if (row && e.button === 0) { // Left click
             handleComponentClick(row);
             e.preventDefault();
         }
-    });
+    };
     
-    container.addEventListener('contextmenu', (e) => {
+    container._contextListener = (e) => {
         const row = e.target.closest('.component-row[data-component]');
         if (row) { // Right click
             handleComponentRightClick(row);
             e.preventDefault();
         }
-    });
+    };
+    
+    // Attach listeners
+    container.addEventListener('click', container._clickListener);
+    container.addEventListener('contextmenu', container._contextListener);
 }
 
 // Handle left-click (increase by 1)
