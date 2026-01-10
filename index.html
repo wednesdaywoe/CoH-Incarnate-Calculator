@@ -2362,9 +2362,6 @@ function populateSlotContent(slot, tree, nodeId) {
             </div>`;
         }).join('');
     }
-    
-    // Attach event listeners
-    attachComponentListeners(contentDiv);
 }
 
 function confirmSelection() {
@@ -2397,39 +2394,41 @@ function confirmSelection() {
     closeSelectorModal();
 }
 
-// Attach event listeners for component checklist functionality
-function attachComponentListeners(container) {
-    // Store listener functions on the container to allow removal later
-    if (container._clickListener) {
-        container.removeEventListener('click', container._clickListener);
-    }
-    if (container._contextListener) {
-        container.removeEventListener('contextmenu', container._contextListener);
+// Initialize global event delegation for all slot panels
+function initializeComponentListeners() {
+    const mainContent = document.querySelector('.main-content');
+    if (!mainContent) {
+        console.error('Could not find .main-content element');
+        return;
     }
     
-    // Define and store listener functions
-    container._clickListener = (e) => {
+    // Left click handler
+    mainContent.addEventListener('click', (e) => {
         const row = e.target.closest('.component-row[data-component]');
-        if (row && e.button === 0) { // Left click
+        if (row && e.button === 0) {
             console.log('Left-click on component:', row.dataset.component);
             handleComponentClick(row);
             e.preventDefault();
         }
-    };
+    });
     
-    container._contextListener = (e) => {
+    // Right click handler
+    mainContent.addEventListener('contextmenu', (e) => {
         const row = e.target.closest('.component-row[data-component]');
-        if (row) { // Right click
+        if (row) {
             console.log('Right-click on component:', row.dataset.component);
             handleComponentRightClick(row);
             e.preventDefault();
             return false;
         }
-    };
+    });
     
-    // Attach listeners
-    container.addEventListener('click', container._clickListener);
-    container.addEventListener('contextmenu', container._contextListener);
+    console.log('Component listeners initialized on .main-content');
+}
+
+// Legacy function - no longer needed since we use global delegation
+function attachComponentListeners(container) {
+    // This is now handled by global event delegation in initializeComponentListeners()
 }
 
 // Handle left-click (decrease remaining by 1 = mark as obtained)
@@ -2477,9 +2476,10 @@ function refreshSlotPanelContent() {
     });
 }
 
-// Initialize totals display
+// Initialize totals display and component listeners
 document.addEventListener('DOMContentLoaded', () => {
     updateTotalsDisplay();
+    initializeComponentListeners();
 });
     </script>
 </body>
