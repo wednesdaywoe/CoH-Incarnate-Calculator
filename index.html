@@ -1556,11 +1556,17 @@ function updateComponentsList() {
     });
     
     listEl.innerHTML = sortedComponents.map(([name, data]) => {
-        const trackingKey = `total-${name}`;
-        const currentQty = componentTracking[trackingKey]?.current ?? 0;
+        // Sum tracking from all slots for this component
+        let totalCurrentQty = 0;
+        Object.keys(selectedPowers).forEach(slot => {
+            const slotTrackingKey = `${slot}-${name}`;
+            totalCurrentQty += componentTracking[slotTrackingKey]?.current ?? 0;
+        });
+        
         const originalQty = data.quantity;
-        const displayQty = originalQty - currentQty;
+        const displayQty = originalQty - totalCurrentQty;
         const isCompleted = displayQty === 0;
+        const trackingKey = `total-${name}`;
         
         return `
             <div class="component-row ${isCompleted ? 'reduced' : ''}" data-component="${trackingKey}" data-original="${originalQty}" title="Left-click to add by 1, right-click to remove by 1">
