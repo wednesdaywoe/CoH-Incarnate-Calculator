@@ -2396,9 +2396,9 @@ function confirmSelection() {
 
 // Initialize global event delegation for all slot panels
 function initializeComponentListeners() {
-    const mainContent = document.querySelector('.main-content');
+    const mainContent = document.querySelector('.main-modal-overlay');
     if (!mainContent) {
-        console.error('Could not find .main-content element');
+        console.error('Could not find .main-modal-overlay element');
         return;
     }
     
@@ -2424,7 +2424,7 @@ function initializeComponentListeners() {
         }
     });
     
-    console.log('Component listeners initialized on .main-content');
+    console.log('Component listeners initialized on .main-modal-overlay');
 }
 
 // Legacy function - no longer needed since we use global delegation
