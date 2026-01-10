@@ -2411,6 +2411,7 @@ function attachComponentListeners(container) {
     container._clickListener = (e) => {
         const row = e.target.closest('.component-row[data-component]');
         if (row && e.button === 0) { // Left click
+            console.log('Left-click on component:', row.dataset.component);
             handleComponentClick(row);
             e.preventDefault();
         }
@@ -2419,8 +2420,10 @@ function attachComponentListeners(container) {
     container._contextListener = (e) => {
         const row = e.target.closest('.component-row[data-component]');
         if (row) { // Right click
+            console.log('Right-click on component:', row.dataset.component);
             handleComponentRightClick(row);
             e.preventDefault();
+            return false;
         }
     };
     
@@ -2429,7 +2432,7 @@ function attachComponentListeners(container) {
     container.addEventListener('contextmenu', container._contextListener);
 }
 
-// Handle left-click (increase by 1)
+// Handle left-click (decrease remaining by 1 = mark as obtained)
 function handleComponentClick(row) {
     const componentKey = row.dataset.component;
     const originalQty = parseInt(row.dataset.original);
@@ -2438,15 +2441,16 @@ function handleComponentClick(row) {
         componentTracking[componentKey] = { current: 0 };
     }
     
-    // Increase current tracked amount (max to original)
+    // Increase obtained count (max to original)
     componentTracking[componentKey].current = Math.min(originalQty, componentTracking[componentKey].current + 1);
+    console.log(`Component ${componentKey} obtained count: ${componentTracking[componentKey].current}/${originalQty}`);
     
     // Refresh displays
     updateComponentsList();
     refreshSlotPanelContent();
 }
 
-// Handle right-click (decrease by 1)
+// Handle right-click (increase remaining by 1 = mark as unobtained)
 function handleComponentRightClick(row) {
     const componentKey = row.dataset.component;
     const originalQty = parseInt(row.dataset.original);
@@ -2455,8 +2459,9 @@ function handleComponentRightClick(row) {
         componentTracking[componentKey] = { current: 0 };
     }
     
-    // Decrease current tracked amount (min 0)
+    // Decrease obtained count (min 0)
     componentTracking[componentKey].current = Math.max(0, componentTracking[componentKey].current - 1);
+    console.log(`Component ${componentKey} obtained count: ${componentTracking[componentKey].current}/${originalQty}`);
     
     // Refresh displays
     updateComponentsList();
