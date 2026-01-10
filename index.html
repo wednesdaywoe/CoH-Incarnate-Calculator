@@ -2402,10 +2402,11 @@ function initializeComponentListeners() {
         return;
     }
     
-    // Left click handler
+    // Left click handler - click events are always left-clicks by default
+    // No need to check e.button (unreliable for click events)
     mainContent.addEventListener('click', (e) => {
         const row = e.target.closest('.component-row[data-component]');
-        if (row && e.button === 0) {
+        if (row) {
             console.log('Left-click on component:', row.dataset.component);
             handleComponentClick(row);
             e.preventDefault();
