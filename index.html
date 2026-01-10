@@ -2043,8 +2043,8 @@ function selectNode(nodeId) {
         updateNodeStates();
         hideNodeInfo();
         
-        document.getElementById('selectBtn').disabled = true;
-        document.getElementById('selectBtn').textContent = 'Select Power';
+        document.getElementById('selectBtn').disabled = false;
+        document.getElementById('selectBtn').textContent = 'Deselect Power (Close)';
         return;
     }
     
@@ -2365,9 +2365,32 @@ function populateSlotContent(slot, tree, nodeId) {
 }
 
 function confirmSelection() {
-    if (!selectedNode) return;
-    
     const panel = document.querySelector(`.slot-panel[data-slot="${currentSlot}"]`);
+    
+    // If deselecting a power (selectedNode is null), clear the slot
+    if (!selectedNode) {
+        // Clear the slot panel
+        panel.querySelector('.slot-selection').textContent = 'Not Selected';
+        panel.classList.remove('selected');
+        
+        const circle = panel.querySelector('.slot-icon-circle');
+        circle.innerHTML = '<span class="empty-icon">+</span>';
+        circle.classList.remove('filled');
+        
+        // Remove from tracked selections
+        delete selectedPowers[currentSlot];
+        
+        // Clear the content div
+        const contentDiv = panel.querySelector('.slot-content');
+        contentDiv.innerHTML = '<div class="component-row"><span class="component-name">No components required</span></div>';
+        
+        // Update totals
+        updateTotalsDisplay();
+        
+        closeSelectorModal();
+        return;
+    }
+    
     const node = currentTreeData[selectedNode];
     
     // Update selection text and icon
