@@ -1270,7 +1270,7 @@ function calculateTotalCosts() {
         if (!selection) return;
         
         // Calculate costs for entire crafting path
-        const pathCosts = getCostsForPath(selection.nodeId);
+        const pathCosts = getCostsForPath(slot, selection.tree, selection.nodeId);
         totalThreads += pathCosts.threads;
         totalEmpRequired += pathCosts.empyrean;
     });
@@ -1302,7 +1302,7 @@ function getNodeOnlyCost(nodeId) {
 }
 
 // Get costs for entire crafting path based on actual components
-function getCostsForPath(finalNodeId) {
+function getCostsForPath(slot, tree, finalNodeId) {
     // For T4 nodes, each tier requires multiple copies of previous tiers
     // because each upgrade consumes the previous version
     
@@ -1326,10 +1326,10 @@ function getCostsForPath(finalNodeId) {
         let totalThreads = 0;
         let totalEmpyrean = 0;
         
-        console.log(`getCostsForPath(${finalNodeId}): combination=[${t3Core}, ${t3Radial}], pathNodeIds=[${pathNodeIds.join(', ')}]`);
+        console.log(`getCostsForPath(${slot}, ${tree}, ${finalNodeId}): combination=[${t3Core}, ${t3Radial}], pathNodeIds=[${pathNodeIds.join(', ')}]`);
         
         pathNodeIds.forEach((nodeId, index) => {
-            const comps = getComponentsForNode(currentSlot, selectedTree, nodeId);
+            const comps = getComponentsForNode(slot, tree, nodeId);
             if (comps && comps.salvage) {
                 const cost = calculateComponentsCost(comps.salvage);
                 console.log(`  [${index}] ${nodeId}: salvage=[${comps.salvage.join(', ')}], cost={threads:${cost.threads}, emp:${cost.empyrean}}`);
@@ -1363,10 +1363,10 @@ function getCostsForPath(finalNodeId) {
     let totalThreads = 0;
     let totalEmpyrean = 0;
     
-    console.log(`getCostsForPath(${finalNodeId}): nodeIds=[${nodeIds.join(', ')}]`);
+    console.log(`getCostsForPath(${slot}, ${tree}, ${finalNodeId}): nodeIds=[${nodeIds.join(', ')}]`);
     
     nodeIds.forEach(nodeId => {
-        const comps = getComponentsForNode(currentSlot, selectedTree, nodeId);
+        const comps = getComponentsForNode(slot, tree, nodeId);
         if (comps && comps.salvage) {
             const cost = calculateComponentsCost(comps.salvage);
             console.log(`  ${nodeId}: salvage=[${comps.salvage.join(', ')}], cost={threads:${cost.threads}, emp:${cost.empyrean}}`);
@@ -1797,11 +1797,11 @@ function buildNodesFromTreeData(treeName) {
 function getTierSuffix(tierId) {
     const suffixMap = {
         't1': 'Boost',
-        't2_core': 'Core Boost',
-        't2_radial': 'Radial Boost',
-        't3_core_1': 'Core Paragon',
+        't2_core': 'Core Paragon',
+        't2_radial': 'Radial Paragon',
+        't3_core_1': 'Partial Core Revamp',
         't3_core_2': 'Partial Core Revamp',
-        't3_radial_1': 'Radial Paragon',
+        't3_radial_1': 'Partial Radial Revamp',
         't3_radial_2': 'Partial Radial Revamp',
         't4_core': 'Total Core Revamp',
         't4_radial': 'Total Radial Revamp'
@@ -2166,7 +2166,7 @@ function showNodeInfo(nodeId) {
     
     // Get costs for node only and full path
     const nodeOnlyCost = getNodeOnlyCost(nodeId);
-    const pathCost = getCostsForPath(nodeId);
+    const pathCost = getCostsForPath(currentSlot, selectedTree, nodeId);
     
     // Calculate merit equivalents
     const nodeOnlyMeritEquiv = Math.floor(nodeOnlyCost.threads / 20) + nodeOnlyCost.empyrean;
@@ -2607,6 +2607,12 @@ function refreshSlotPanelContent() {
             populateSlotContent(slot, selection.tree, selection.nodeId);
         }
     });
+    
+    // Re-update the total components list after restoring all slot panels
+    updateComponentsList();
+    
+    // Re-update the totals display (threads and empyrean merits)
+    updateTotalsDisplay();
 }
 
 // Initialize totals display and component listeners
