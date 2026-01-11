@@ -2517,33 +2517,43 @@ function handleComponentRightClick(row) {
 // Helper function to restore slot panel UI from saved selection
 function restoreSlotPanelUI(slot, selection) {
     const panel = document.querySelector(`.slot-panel[data-slot="${slot}"]`);
-    if (!panel) return;
+    if (!panel) {
+        console.warn(`Cannot restore UI for ${slot}: panel not found`);
+        return;
+    }
     
     if (!selection) {
         // Clear the slot panel
-        panel.querySelector('.slot-selection').textContent = '-';
+        const selectionEl = panel.querySelector('.slot-selection');
+        if (selectionEl) selectionEl.textContent = '-';
         panel.classList.remove('selected');
         
         const circle = panel.querySelector('.slot-icon-circle');
-        circle.innerHTML = '<span class="empty-icon">+</span>';
-        circle.classList.remove('filled');
+        if (circle) {
+            circle.innerHTML = '<span class="empty-icon">+</span>';
+            circle.classList.remove('filled');
+        }
         return;
     }
     
     // Build the node name from the tree name and node ID
-    // The format should match what confirmSelection uses
     const slotDisplay = slot.charAt(0).toUpperCase() + slot.slice(1);
     const actualPowerName = getActualPowerName(selection.tree, selection.nodeId);
     const nodeName = `${slotDisplay} - ${actualPowerName}`;
     
     // Update selection text
-    panel.querySelector('.slot-selection').textContent = selection.tree;
-    panel.classList.add('selected');
+    const selectionEl = panel.querySelector('.slot-selection');
+    if (selectionEl) {
+        selectionEl.textContent = selection.tree;
+        panel.classList.add('selected');
+    }
     
     // Update icon circle
     const circle = panel.querySelector('.slot-icon-circle');
-    circle.innerHTML = `<img src="${getIconPathForSelection(slot, selection.tree, selection.nodeId)}" alt="${nodeName}">`;
-    circle.classList.add('filled');
+    if (circle) {
+        circle.innerHTML = `<img src="${getIconPathForSelection(slot, selection.tree, selection.nodeId)}" alt="${nodeName}">`;
+        circle.classList.add('filled');
+    }
 }
 
 // Helper function to get icon path from slot, tree, and nodeId
@@ -2567,12 +2577,32 @@ function getIconPathForSelection(slot, tree, nodeId) {
 
 // Refresh all slot panel content to reflect updated component tracking
 function refreshSlotPanelContent() {
+    // Ensure we have data to restore
+    if (Object.keys(selectedPowers).length === 0) {
+        console.log('No selected powers to restore');
+        return;
+    }
+    
+    console.log('Restoring slot panel content for:', Object.keys(selectedPowers));
+    
     Object.entries(selectedPowers).forEach(([slot, selection]) => {
+        // Check if the panel exists before trying to update it
+        const panel = document.querySelector(`.slot-panel[data-slot="${slot}"]`);
+        if (!panel) {
+            console.warn(`Slot panel for ${slot} not found in DOM yet`);
+            return;
+        }
+        
         // Restore the slot panel UI (selection text, icon, etc.)
         restoreSlotPanelUI(slot, selection);
         
         // Restore the component list
         if (selection) {
+            const contentDiv = panel.querySelector('.slot-content');
+            if (!contentDiv) {
+                console.warn(`Content div for slot ${slot} not found`);
+                return;
+            }
             populateSlotContent(slot, selection.tree, selection.nodeId);
         }
     });
@@ -2580,13 +2610,24 @@ function refreshSlotPanelContent() {
 
 // Initialize totals display and component listeners
 document.addEventListener('DOMContentLoaded', () => {
-    // Load saved state from localStorage
-    loadCalculatorState();
+    console.log('DOM Content Loaded - initializing calculator');
     
-    // Update display with loaded or default state
-    updateTotalsDisplay();
+    // Load saved state from localStorage
+    const stateLoaded = loadCalculatorState();
+    
+    if (stateLoaded) {
+        console.log('State loaded from localStorage, restoring UI...');
+    }
+    
+    // Initialize component listeners first
     initializeComponentListeners();
-    refreshSlotPanelContent();
+    
+    // Use setTimeout to ensure DOM is fully rendered before updating UI
+    setTimeout(() => {
+        updateTotalsDisplay();
+        refreshSlotPanelContent();
+        console.log('UI restoration complete');
+    }, 0);
 });
 
 // ============================================
