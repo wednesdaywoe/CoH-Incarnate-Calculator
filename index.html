@@ -2578,12 +2578,13 @@ function getIconPathForSelection(slot, tree, nodeId) {
 // Refresh all slot panel content to reflect updated component tracking
 function refreshSlotPanelContent() {
     // Ensure we have data to restore
-    if (Object.keys(selectedPowers).length === 0) {
+    const hasSelections = Object.values(selectedPowers).some(sel => sel !== null);
+    if (!hasSelections) {
         console.log('No selected powers to restore');
         return;
     }
     
-    console.log('Restoring slot panel content for:', Object.keys(selectedPowers));
+    console.log('Restoring slot panel content for:', Object.keys(selectedPowers).filter(k => selectedPowers[k] !== null));
     
     Object.entries(selectedPowers).forEach(([slot, selection]) => {
         // Check if the panel exists before trying to update it
@@ -2624,8 +2625,18 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Use setTimeout to ensure DOM is fully rendered before updating UI
     setTimeout(() => {
-        updateTotalsDisplay();
-        refreshSlotPanelContent();
+        try {
+            updateTotalsDisplay();
+        } catch (error) {
+            console.error('Error updating totals display:', error);
+        }
+        
+        try {
+            refreshSlotPanelContent();
+        } catch (error) {
+            console.error('Error refreshing slot panel content:', error);
+        }
+        
         console.log('UI restoration complete');
     }, 0);
 });
