@@ -1397,6 +1397,178 @@ const IncarnatePowerInfo = {
         baseStats: {},
         damageType: 'None'
       },
+      't2_core': {
+        desc: "While toggled on, this power provides a moderate boost in Healing and Endurance Discount to all leaguemates within a 50 foot radius. Up to five Support Hybrid powers can stack on a single target at any given time. Equipping this Hybrid power grants a passive boost to Endurance Discount at all times.Notes: Support Core Genome is unaffected by Recharge Time changes.Recharge: Long.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
+      't2_radial': {
+        desc: "While toggled on, this power provides a boost in Damage(All) and a chance to grant Regeneration to all leaguemates within a 50 foot radius. Up to five Support Hybrid powers can stack on a single target at any given time. Equipping this Hybrid power grants a passive boost to Endurance Discount at all times.Notes: Support Radial Genome is unaffected by Recharge Time changes.Recharge: Long.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
+      't3_core_1': {
+        desc: "While toggled on, this power provides a high boost in Healing and Endurance Discount to all leaguemates within a 50 foot radius. Up to five Support Hybrid powers can stack on a single target at any given time. Equipping this Hybrid power grants a passive boost to Endurance Discount at all times.Notes: Support Core Embodiment is unaffected by Recharge Time changes.Recharge: Long.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
+      't3_core_2': {
+        desc: "While toggled on, this power provides a moderate boost in Healing and Endurance Discount to all leaguemates within a 50 foot radius. Up to five Support Hybrid powers can stack on a single target at any given time. Equipping this Hybrid power grants a passive boost to Endurance Discount at all times.Notes: Support Partial Core Graft is unaffected by Recharge Time changes.Recharge: Long.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
+      't3_radial_1': {
+        desc: "While toggled on, this power provides a high chance to grant Regeneration and Endurance Discount to all leaguemates within a 50 foot radius. Up to five Support Hybrid powers can stack on a single target at any given time. Equipping this Hybrid power grants a passive boost to Endurance Discount at all times.Notes: Support Radial Embodiment is unaffected by Recharge Time changes.Recharge: Long.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
+      't3_radial_2': {
+        desc: "While toggled on, this power provides a moderate boost in Damage(All) and a moderate chance to grant Regeneration to all leaguemates within a 50 foot radius. Up to five Support Hybrid powers can stack on a single target at any given time. Equipping this Hybrid power grants a passive boost to Endurance Discount at all times.Notes: Support Partial Radial Graft is unaffected by Recharge Time changes.Recharge: Long.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
+      't4_core': {
+        desc: "While toggled on, this power provides a maximum boost in Healing and Endurance Discount to all leaguemates within a 50 foot radius. Up to five Support Hybrid powers can stack on a single target at any given time. Equipping this Hybrid power grants a passive boost to Endurance Discount at all times.Notes: Support Total Core Graft is unaffected by Recharge Time changes.Recharge: Long.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
+      't4_radial': {
+        desc: "While toggled on, this power provides a high chance to grant Regeneration and Endurance Discount to all leaguemates within a 50 foot radius. Up to five Support Hybrid powers can stack on a single target at any given time. Equipping this Hybrid power grants a passive boost to Endurance Discount at all times.Notes: Support Total Radial Graft is unaffected by Recharge Time changes.Recharge: Long.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
+    },
+    'melee': {
+      't1': {
+        desc: "While active, this power grants a moderate boost to Melee damage and Defense(Melee). Equipping this Hybrid power grants a passive boost to Melee damage at all times.Notes: Melee Genome is unaffected by Recharge Time changes.Recharge: Long.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
+      't2_core': {
+        desc: "While active, this power grants a higher boost to Melee damage and Defense(Melee). Equipping this Hybrid power grants a passive boost to Melee damage at all times.Notes: Melee Core Genome is unaffected by Recharge Time changes.Recharge: Long.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
+      't2_radial': {
+        desc: "While active, this power grants a moderate boost to Melee damage and a moderate chance for critical strikes. Equipping this Hybrid power grants a passive boost to Melee damage at all times.Notes: Melee Radial Genome is unaffected by Recharge Time changes.Recharge: Long.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
+      't3_core_1': {
+        desc: "While active, this power grants a very high boost to Melee damage and Defense(Melee). Equipping this Hybrid power grants a passive boost to Melee damage at all times.Notes: Melee Core Embodiment is unaffected by Recharge Time changes.Recharge: Long.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
+      't3_core_2': {
+        desc: "While active, this power grants a high boost to Melee damage and Defense(Melee). Equipping this Hybrid power grants a passive boost to Melee damage at all times.Notes: Melee Partial Core Graft is unaffected by Recharge Time changes.Recharge: Long.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
+      't3_radial_1': {
+        desc: "While active, this power grants a very high chance for critical strikes with Melee attacks and Defense(Melee). Equipping this Hybrid power grants a passive boost to Melee damage at all times.Notes: Melee Radial Embodiment is unaffected by Recharge Time changes.Recharge: Long.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
+      't3_radial_2': {
+        desc: "While active, this power grants a moderate boost to Melee damage and a moderate chance for critical strikes. Equipping this Hybrid power grants a passive boost to Melee damage at all times.Notes: Melee Partial Radial Graft is unaffected by Recharge Time changes.Recharge: Long.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
+      't4_core': {
+        desc: "While active, this power grants a maximum boost to Melee damage and Defense(Melee). Equipping this Hybrid power grants a passive boost to Melee damage at all times.Notes: Melee Total Core Graft is unaffected by Recharge Time changes.Recharge: Long.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
+      't4_radial': {
+        desc: "While active, this power grants a high chance for critical strikes with Melee attacks and Defense(Melee). Equipping this Hybrid power grants a passive boost to Melee damage at all times.Notes: Melee Total Radial Graft is unaffected by Recharge Time changes.Recharge: Long.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
     },
   },
   interface: {
