@@ -864,6 +864,24 @@
             cursor: not-allowed;
         }
         
+        .modal-footer {
+            padding: 16px 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .btn-reset {
+            background: #DC2626;
+            border: 1px solid #991B1B;
+            color: white;
+        }
+        
+        .btn-reset:hover {
+            background: #991B1B;
+        }
+        
         /* Component rarity colors */
         .component-common {
             color: #FFFFFF;
@@ -1108,6 +1126,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <div class="modal-footer">
+                <button class="btn btn-reset" onclick="resetAllCalculator()">Reset All</button>
+                <div></div>
             </div>
         </div>
     </div>
@@ -2502,9 +2525,137 @@ function refreshSlotPanelContent() {
 
 // Initialize totals display and component listeners
 document.addEventListener('DOMContentLoaded', () => {
+    // Load saved state from localStorage
+    loadCalculatorState();
+    
+    // Update display with loaded or default state
     updateTotalsDisplay();
     initializeComponentListeners();
+    refreshSlotPanelContent();
 });
+
+// ============================================
+// STATE PERSISTENCE (localStorage)
+// ============================================
+
+/**
+ * Save current calculator state to localStorage
+ */
+function saveCalculatorState() {
+    try {
+        const state = {
+            selectedPowers: selectedPowers,
+            componentTracking: componentTracking,
+            lastSelections: lastSelections,
+            timestamp: new Date().toISOString()
+        };
+        localStorage.setItem('coH_incarnate_calculator_state', JSON.stringify(state));
+        console.log('Calculator state saved to localStorage');
+    } catch (error) {
+        console.error('Error saving calculator state:', error);
+    }
+}
+
+/**
+ * Load calculator state from localStorage
+ */
+function loadCalculatorState() {
+    try {
+        const saved = localStorage.getItem('coH_incarnate_calculator_state');
+        if (saved) {
+            const state = JSON.parse(saved);
+            
+            // Restore selected powers
+            if (state.selectedPowers) {
+                Object.assign(selectedPowers, state.selectedPowers);
+            }
+            
+            // Restore component tracking
+            if (state.componentTracking) {
+                Object.assign(componentTracking, state.componentTracking);
+            }
+            
+            // Restore last selections
+            if (state.lastSelections) {
+                Object.assign(lastSelections, state.lastSelections);
+            }
+            
+            console.log('Calculator state restored from localStorage');
+            return true;
+        }
+    } catch (error) {
+        console.error('Error loading calculator state:', error);
+    }
+    return false;
+}
+
+/**
+ * Reset all calculator state
+ */
+function resetAllCalculator() {
+    if (confirm('Are you sure you want to reset the entire calculator? This will clear all selections and progress.')) {
+        // Clear selected powers
+        Object.keys(selectedPowers).forEach(slot => {
+            selectedPowers[slot] = null;
+        });
+        
+        // Clear component tracking
+        Object.keys(componentTracking).forEach(key => {
+            delete componentTracking[key];
+        });
+        
+        // Clear last selections
+        Object.keys(lastSelections).forEach(slot => {
+            lastSelections[slot] = null;
+        });
+        
+        // Clear localStorage
+        localStorage.removeItem('coH_incarnate_calculator_state');
+        
+        // Refresh all UI elements
+        updateTotalsDisplay();
+        updateComponentsList();
+        refreshSlotPanelContent();
+        
+        // Reset all slot panels to show empty state
+        document.querySelectorAll('.slot-panel').forEach(panel => {
+            const slot = panel.dataset.slot;
+            const circle = panel.querySelector('.slot-icon-circle');
+            const selection = panel.querySelector('.slot-selection');
+            
+            circle.innerHTML = '<span class="empty-icon">+</span>';
+            circle.classList.remove('filled');
+            selection.textContent = '-';
+            panel.classList.add('collapsed');
+            panel.querySelector('.slot-content').innerHTML = '';
+        });
+        
+        console.log('Calculator reset to default state');
+    }
+}
+
+// Auto-save state when key functions complete
+// We'll wrap the original functions to add save calls
+const originalConfirmSelection = window.confirmSelection;
+window.confirmSelection = function() {
+    const result = originalConfirmSelection.apply(this, arguments);
+    saveCalculatorState();
+    return result;
+};
+
+const originalHandleComponentClick = window.handleComponentClick;
+window.handleComponentClick = function() {
+    const result = originalHandleComponentClick.apply(this, arguments);
+    saveCalculatorState();
+    return result;
+};
+
+const originalHandleComponentRightClick = window.handleComponentRightClick;
+window.handleComponentRightClick = function() {
+    const result = originalHandleComponentRightClick.apply(this, arguments);
+    saveCalculatorState();
+    return result;
+}
     </script>
 </body>
 </html>
