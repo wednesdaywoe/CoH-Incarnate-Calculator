@@ -536,6 +536,44 @@ const IncarnateComponents = {
                 }
             },
         },
+        Mighty: {
+            tier1: {
+                core: {
+                    salvage: ["1x SuperchargedCapacitor", "1x BiomorphicGoo", "1x GenomicAnalysis"],
+                    prerequisites: []
+                },
+            },
+            tier2: {
+                core: {
+                    salvage: ["1x MeditationTechniques", "1x BiomorphicGoo", "1x GluonCompound"],
+                    prerequisites: ["Mighty_Judgement"]
+                },
+                radial: {
+                    salvage: ["1x SuperchargedCapacitor", "1x GenomicAnalysis", "1x CytoliticInfusion"],
+                    prerequisites: ["Mighty_Judgement"]
+                }
+            },
+            tier3: {
+                core: {
+                    salvage: ["1x BiomorphicGoo", "1x SuperchargedCapacitor", "1x SuperconductiveMembrane"],
+                    prerequisites: ["Mighty_Core_Judgement"]
+                },
+                radial: {
+                    salvage: ["1x GenomicAnalysis", "1x MeditationTechniques", "1x SuperconductiveMembrane"],
+                    prerequisites: ["Mighty_Radial_Judgement"]
+                }
+            },
+            tier4: {
+                core: {
+                    salvage: ["1x BiomorphicGoo", "1x NanotechGrowthMedium", "1x InfiniteTessellation"],
+                    prerequisites: ["Mighty_Partial_Core_Judgement", "Mighty_Partial_Radial_Judgement"]
+                },
+                radial: {
+                    salvage: ["1x SuperchargedCapacitor", "1x DetailedReports", "1x SelfEvolvingAlloy"],
+                    prerequisites: ["Mighty_Partial_Core_Judgement", "Mighty_Partial_Radial_Judgement"]
+                }
+            },
+        },
     },
     interface: {
         Spectral: {

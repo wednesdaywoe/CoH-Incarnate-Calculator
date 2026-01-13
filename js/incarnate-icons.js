@@ -70,7 +70,7 @@ const IncarnateIcons = {
     getTrees(slot) {
         const trees = {
             alpha: ['Agility', 'Cardiac', 'Intuition', 'Musculature', 'Nerve', 'Resilient', 'Spiritual', 'Vigor'],
-            judgement: ['Cryonic', 'Ion', 'Pyronic', 'Void', 'Vorpal'],
+            judgement: ['Cryonic', 'Ion', 'Mighty', 'Pyronic', 'Void', 'Vorpal'],
             interface: ['Cognitive', 'Degenerative', 'Diamagnetic', 'Gravitic', 'Paralytic', 'Preemptive', 'Reactive', 'Spectral'],
             lore: ['Arachnos', 'Banished', 'Carnival', 'Cimeroran', 'Clockwork', 'Drones', 'Elementals', 
                    'IDF', 'Knives', 'Lights', 'Longbow', 'Nemesis', 'Phantoms', 'Rikti', 'Rularuu', 

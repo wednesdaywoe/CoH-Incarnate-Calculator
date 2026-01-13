@@ -157,6 +157,17 @@ const IncarnateData = {
                     { core: 'Vorpal Partial Core Invocation', radial: 'Vorpal Partial Radial Invocation', desc: 'Core: Extended debuff | Radial: Wider cone +1 Level Shift' },
                     { core: 'Vorpal Total Core Invocation', radial: 'Vorpal Total Radial Invocation', desc: 'Core: Maximum -Defense | Radial: Maximum cone' }
                 ]
+            },
+            Mighty: {
+                name: 'Mighty',
+                type: 'Smash',
+                description: 'PBAoE, Extreme DMG (Smashing), Recharge: Very Long',
+                tiers: [
+                    { name: 'Mighty Judgement', desc: 'PBAoE, Extreme Smashing damage with knockdown' },
+                    { core: 'Mighty Core Slam', radial: 'Mighty Radial Quake', desc: 'Core: Higher knockdown | Radial: Larger radius' },
+                    { core: 'Mighty Partial Core Invocation', radial: 'Mighty Partial Radial Invocation', desc: 'Core: Extended knockdown | Radial: Wider area +1 Level Shift' },
+                    { core: 'Mighty Total Core Invocation', radial: 'Mighty Total Radial Invocation', desc: 'Core: Maximum knockdown | Radial: Maximum radius' }
+                ]
             }
         }
     },

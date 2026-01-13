@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc:*)",
+      "Bash(grep:*)",
+      "Bash(ls \"c:\\\\Projects\\\\CoH-Incarnate-Calculator\\\\img\\\\Incarnate\"\" | grep -i \"Judgement_Mighty \")"
+    ]
+  }
+}

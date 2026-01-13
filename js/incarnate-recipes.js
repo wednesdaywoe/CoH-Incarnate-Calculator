@@ -52,13 +52,14 @@ const IncarnateRecipes = {
     
     // Judgement Slot (Standard path)
     judgement: {
-        trees: ['Cryonic', 'Ion', 'Pyronic', 'Void', 'Vorpal'],
+        trees: ['Cryonic', 'Ion', 'Pyronic', 'Void', 'Vorpal', 'Mighty'],
         damageTypes: {
             Cryonic: 'Cold',
             Ion: 'Energy',
             Pyronic: 'Fire',
             Void: 'Negative',
-            Vorpal: 'Lethal'
+            Vorpal: 'Lethal',
+            Mighty: 'Smash'
         },
         tiers: {
             1: {
