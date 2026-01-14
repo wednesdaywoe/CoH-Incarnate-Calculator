@@ -2342,7 +2342,7 @@ const IncarnatePowerInfo = {
         damageType: 'None'
       },
       't3_core_1': {
-        desc: "Long Ranged Cone, Extreme DMG (Cold).Notes: Cryonic Core Final Judgement is unaffected by Recharge Time, Range, Radius or Arc changes.Damage: Extreme.Recharge: Long.",
+        desc: "Long Ranged Cone, Extreme DMG (Cold).Notes: Cryonic Core Ally is unaffected by Recharge Time, Range, Radius or Arc changes.Damage: Extreme.Recharge: Long.",
         targets: 'Self',
         range: '0',
         radius: '0',
@@ -2362,7 +2362,7 @@ const IncarnatePowerInfo = {
         damageType: 'None'
       },
       't3_radial_1': {
-        desc: "Long Ranged Cone, Extreme DMG (Cold).Notes: Cryonic Radial Final Judgement is unaffected by Recharge Time, Range, Radius or Arc changes.Damage: Extreme.Recharge: Long.",
+        desc: "Long Ranged Cone, Extreme DMG (Cold).Notes: Cryonic Radial Ally is unaffected by Recharge Time, Range, Radius or Arc changes.Damage: Extreme.Recharge: Long.",
         targets: 'Self',
         range: '0',
         radius: '0',
