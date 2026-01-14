@@ -3,6 +3,21 @@
  * Complete crafting costs for all Incarnate powers
  */
 
+// Utility to sort component lists by rarity (descending) then alphabetically (descending)
+function sortComponents(components) {
+    const rarityOrder = ['Common', 'Uncommon', 'Rare', 'Very Rare'];
+    return components.slice().sort((a, b) => {
+        // Extract rarity and name
+        const getRarity = str => rarityOrder.findIndex(r => str.includes(r));
+        const getName = str => str.replace(/^[0-9]+x\s*/, '');
+        const rarityA = getRarity(a);
+        const rarityB = getRarity(b);
+        if (rarityA !== rarityB) return rarityA - rarityB;
+        // Descending alphabetical
+        return getName(b).localeCompare(getName(a));
+    });
+}
+
 const IncarnateRecipes = {
     // Alpha Slot (Unique crafting path)
     alpha: {
@@ -13,7 +28,7 @@ const IncarnateRecipes = {
                 name: 'Paragon',
                 threads: 20,
                 shards: 12,  // 3 Common Alpha Components
-                components: ['3x Common Alpha Component'],
+                components: sortComponents(['3x Common Alpha Component']),
                 requires: []
             },
             2: {
@@ -22,7 +37,7 @@ const IncarnateRecipes = {
                 radial: { name: 'Radial Paragon' },
                 threads: 60,
                 shards: 32,  // 1 Uncommon + 2 Common + T1 consumed
-                components: ['1x Uncommon Alpha Component', '2x Common Alpha Component'],
+                components: sortComponents(['1x Uncommon Alpha Component', '2x Common Alpha Component']),
                 requires: ['t1']
             },
             3: {
@@ -32,7 +47,7 @@ const IncarnateRecipes = {
                 threads: 100,
                 empyrean: 8,
                 noticeOfWell: 1,
-                components: ['1x Rare Alpha Component'],
+                components: sortComponents(['1x Rare Alpha Component']),
                 requires: ['t2']
             },
             4: {
@@ -41,7 +56,7 @@ const IncarnateRecipes = {
                 radial: { name: 'Total Radial Revamp' },
                 threads: 600,  // 300 per T3 variant
                 empyrean: 60,  // 30 per T3 variant
-                components: ['2x Very Rare Alpha Component'],
+                components: sortComponents(['2x Very Rare Alpha Component']),
                 requires: ['t3_core', 't3_radial']  // Need BOTH T3 variants
             }
         }
@@ -62,14 +77,14 @@ const IncarnateRecipes = {
             1: {
                 name: 'Judgement',
                 threads: 60,
-                components: ['1x Common Incarnate Component'],
+                components: sortComponents(['1x Common Incarnate Component']),
                 requires: []
             },
             2: {
                 core: { name: 'Core Beam' },
                 radial: { name: 'Radial Blast' },
                 threads: 240,  // 4 Uncommon Components
-                components: ['4x Uncommon Incarnate Component'],
+                components: sortComponents(['4x Uncommon Incarnate Component']),
                 requires: ['t1']
             },
             3: {
@@ -77,7 +92,7 @@ const IncarnateRecipes = {
                 radial: { name: 'Partial Radial Invocation' },
                 threads: 100,
                 empyrean: 8,
-                components: ['1x Rare Incarnate Component'],
+                components: sortComponents(['1x Rare Incarnate Component']),
                 requires: ['t2']
             },
             4: {
@@ -85,7 +100,7 @@ const IncarnateRecipes = {
                 radial: { name: 'Total Radial Invocation' },
                 threads: 300,
                 empyrean: 30,
-                components: ['1x Very Rare Incarnate Component'],
+                components: sortComponents(['1x Very Rare Incarnate Component']),
                 requires: ['t3_core', 't3_radial']
             }
         }
@@ -108,14 +123,14 @@ const IncarnateRecipes = {
             1: {
                 name: 'Interface',
                 threads: 60,
-                components: ['1x Common Incarnate Component'],
+                components: sortComponents(['1x Common Incarnate Component']),
                 requires: []
             },
             2: {
                 core: { name: 'Core Interface' },
                 radial: { name: 'Radial Interface' },
                 threads: 240,
-                components: ['4x Uncommon Incarnate Component'],
+                components: sortComponents(['4x Uncommon Incarnate Component']),
                 requires: ['t1']
             },
             3: {
@@ -123,7 +138,7 @@ const IncarnateRecipes = {
                 radial: { name: 'Partial Radial Conversion' },
                 threads: 100,
                 empyrean: 8,
-                components: ['1x Rare Incarnate Component'],
+                components: sortComponents(['1x Rare Incarnate Component']),
                 requires: ['t2']
             },
             4: {
@@ -131,7 +146,7 @@ const IncarnateRecipes = {
                 radial: { name: 'Total Radial Conversion' },
                 threads: 300,
                 empyrean: 30,
-                components: ['1x Very Rare Incarnate Component'],
+                components: sortComponents(['1x Very Rare Incarnate Component']),
                 requires: ['t3_core', 't3_radial']
             },
             5: {
@@ -150,14 +165,14 @@ const IncarnateRecipes = {
             1: {
                 name: 'Ally',
                 threads: 60,
-                components: ['1x Common Incarnate Component'],
+                components: sortComponents(['1x Common Incarnate Component']),
                 requires: []
             },
             2: {
                 core: { name: 'Core Ally' },
                 radial: { name: 'Radial Ally' },
                 threads: 240,
-                components: ['4x Uncommon Incarnate Component'],
+                components: sortComponents(['4x Uncommon Incarnate Component']),
                 requires: ['t1']
             },
             3: {
@@ -165,7 +180,7 @@ const IncarnateRecipes = {
                 radial: { name: 'Partial Radial Improved Ally' },
                 threads: 100,
                 empyrean: 8,
-                components: ['1x Rare Incarnate Component'],
+                components: sortComponents(['1x Rare Incarnate Component']),
                 requires: ['t2']
             },
             4: {
@@ -173,7 +188,7 @@ const IncarnateRecipes = {
                 radial: { name: 'Total Radial Improved Ally' },
                 threads: 300,
                 empyrean: 30,
-                components: ['1x Very Rare Incarnate Component'],
+                components: sortComponents(['1x Very Rare Incarnate Component']),
                 requires: ['t3_core', 't3_radial']
             },
             5: {
@@ -197,14 +212,14 @@ const IncarnateRecipes = {
             1: {
                 name: 'Invocation',
                 threads: 60,
-                components: ['1x Common Incarnate Component'],
+                components: sortComponents(['1x Common Incarnate Component']),
                 requires: []
             },
             2: {
                 core: { name: 'Core Invocation' },
                 radial: { name: 'Radial Invocation' },
                 threads: 240,
-                components: ['4x Uncommon Incarnate Component'],
+                components: sortComponents(['4x Uncommon Incarnate Component']),
                 requires: ['t1']
             },
             3: {
@@ -212,7 +227,7 @@ const IncarnateRecipes = {
                 radial: { name: 'Partial Radial Invocation' },
                 threads: 100,
                 empyrean: 8,
-                components: ['1x Rare Incarnate Component'],
+                components: sortComponents(['1x Rare Incarnate Component']),
                 requires: ['t2']
             },
             4: {
@@ -220,7 +235,7 @@ const IncarnateRecipes = {
                 radial: { name: 'Total Radial Invocation' },
                 threads: 300,
                 empyrean: 30,
-                components: ['1x Very Rare Incarnate Component'],
+                components: sortComponents(['1x Very Rare Incarnate Component']),
                 requires: ['t3_core', 't3_radial']
             },
             5: {
@@ -243,14 +258,14 @@ const IncarnateRecipes = {
             1: {
                 name: 'Genome',
                 threads: 60,
-                components: ['1x Common Incarnate Component'],
+                components: sortComponents(['1x Common Incarnate Component']),
                 requires: []
             },
             2: {
                 core: { name: 'Core Genome' },
                 radial: { name: 'Radial Genome' },
                 threads: 240,
-                components: ['4x Uncommon Incarnate Component'],
+                components: sortComponents(['4x Uncommon Incarnate Component']),
                 requires: ['t1']
             },
             3: {
@@ -258,7 +273,7 @@ const IncarnateRecipes = {
                 radial: { name: 'Partial Radial Graft' },
                 threads: 100,
                 empyrean: 8,
-                components: ['1x Rare Incarnate Component'],
+                components: sortComponents(['1x Rare Incarnate Component']),
                 requires: ['t2']
             },
             4: {
@@ -266,7 +281,7 @@ const IncarnateRecipes = {
                 radial: { name: 'Total Radial Graft' },
                 threads: 300,
                 empyrean: 30,
-                components: ['1x Very Rare Incarnate Component'],
+                components: sortComponents(['1x Very Rare Incarnate Component']),
                 requires: ['t3_core', 't3_radial']
             },
             5: {
