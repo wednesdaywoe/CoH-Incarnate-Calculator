@@ -25,11 +25,11 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
-                    salvage: ["1x MeditationTechniques", "1x EnchantedSand", "1x AncientTexts"],
+                    salvage: ["1x SuperchargedCapacitor", "1x DetailedReports", "1x AncientTexts"],
                     prerequisites: ["Vigor_Core_Boost"]
                 },
                 core_2: {
-                    salvage: ["1x SuperchargedCapacitor", "1x DetailedReports", "1x AncientTexts"],
+                    salvage: ["1x MeditationTechniques", "1x EnchantedSand", "1x AncientTexts"],
                     prerequisites: ["Vigor_Core_Boost"]
                 },
                 radial: {
@@ -71,11 +71,11 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
-                    salvage: ["1x MeditationTechniques", "1x EnchantedSand", "1x AncientTexts"],
+                    salvage: ["1x SuperchargedCapacitor", "1x DetailedReports", "1x AncientTexts"],
                     prerequisites: ["Spiritual_Core_Boost"]
                 },
                 core_2: {
-                    salvage: ["1x SuperchargedCapacitor", "1x DetailedReports", "1x AncientTexts"],
+                    salvage: ["1x MeditationTechniques", "1x EnchantedSand", "1x AncientTexts"],
                     prerequisites: ["Spiritual_Core_Boost"]
                 },
                 radial: {
@@ -117,11 +117,11 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
-                    salvage: ["1x GenomicAnalysis", "1x ArcaneCantrip", "1x ExoticIsotope"],
+                    salvage: ["2x EnchantedSand", "1x SuperconductiveMembrane"],
                     prerequisites: ["Resilient_Core_Boost"]
                 },
                 core_2: {
-                    salvage: ["2x EnchantedSand", "1x SuperconductiveMembrane"],
+                    salvage: ["1x GenomicAnalysis", "1x ArcaneCantrip", "1x ExoticIsotope"],
                     prerequisites: ["Resilient_Core_Boost"]
                 },
                 radial: {
@@ -163,11 +163,11 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
-                    salvage: ["1x GenomicAnalysis", "1x ArcaneCantrip", "1x ExoticIsotope"],
+                    salvage: ["2x EnchantedSand", "1x SuperconductiveMembrane"],
                     prerequisites: ["Nerve_Core_Boost"]
                 },
                 core_2: {
-                    salvage: ["2x EnchantedSand", "1x SuperconductiveMembrane"],
+                    salvage: ["1x GenomicAnalysis", "1x ArcaneCantrip", "1x ExoticIsotope"],
                     prerequisites: ["Nerve_Core_Boost"]
                 },
                 radial: {
@@ -209,11 +209,11 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
-                    salvage: ["2x NanotechGrowthMedium", "1x ExoticIsotope"],
+                    salvage: ["1x GenomicAnalysis", "1x NanotechGrowthMedium", "1x SuperconductiveMembrane"],
                     prerequisites: ["Musculature_Core_Boost"]
                 },
                 core_2: {
-                    salvage: ["1x GenomicAnalysis", "1x NanotechGrowthMedium", "1x SuperconductiveMembrane"],
+                    salvage: ["2x NanotechGrowthMedium", "1x ExoticIsotope"],
                     prerequisites: ["Musculature_Core_Boost"]
                 },
                 radial: {
@@ -255,11 +255,11 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
-                    salvage: ["1x BiomorphicGoo", "1x ArcaneCantrip", "1x SuperconductiveMembrane"],
+                    salvage: ["1x GenomicAnalysis", "1x ArcaneCantrip", "1x AncientTexts"],
                     prerequisites: ["Intuition_Core_Boost"]
                 },
                 core_2: {
-                    salvage: ["1x GenomicAnalysis", "1x ArcaneCantrip", "1x AncientTexts"],
+                    salvage: ["1x BiomorphicGoo", "1x ArcaneCantrip", "1x SuperconductiveMembrane"],
                     prerequisites: ["Intuition_Core_Boost"]
                 },
                 radial: {
@@ -301,11 +301,11 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
-                    salvage: ["1x BiomorphicGoo", "1x ArcaneCantrip", "1x SuperconductiveMembrane"],
+                    salvage: ["1x GenomicAnalysis", "1x ArcaneCantrip", "1x AncientTexts"],
                     prerequisites: ["Cardiac_Core_Boost"]
                 },
                 core_2: {
-                    salvage: ["1x GenomicAnalysis", "1x ArcaneCantrip", "1x AncientTexts"],
+                    salvage: ["1x BiomorphicGoo", "1x ArcaneCantrip", "1x SuperconductiveMembrane"],
                     prerequisites: ["Cardiac_Core_Boost"]
                 },
                 radial: {
@@ -347,11 +347,11 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
-                    salvage: ["2x NanotechGrowthMedium", "1x ExoticIsotope"],
+                    salvage: ["1x GenomicAnalysis", "1x NanotechGrowthMedium", "1x SuperconductiveMembrane"],
                     prerequisites: ["Agility_Core_Boost"]
                 },
                 core_2: {
-                    salvage: ["1x GenomicAnalysis", "1x NanotechGrowthMedium", "1x SuperconductiveMembrane"],
+                    salvage: ["2x NanotechGrowthMedium", "1x ExoticIsotope"],
                     prerequisites: ["Agility_Core_Boost"]
                 },
                 radial: {
