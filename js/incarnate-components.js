@@ -25,22 +25,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x MeditationTechniques", "1x EnchantedSand", "1x AncientTexts"],
+                    prerequisites: ["Vigor_Core_Boost"]
+                },
+                core_2: {
                     salvage: ["1x SuperchargedCapacitor", "1x DetailedReports", "1x AncientTexts"],
                     prerequisites: ["Vigor_Core_Boost"]
                 },
                 radial: {
                     salvage: ["1x SuperchargedCapacitor", "1x EnchantedSand", "1x AncientTexts"],
                     prerequisites: ["Vigor_Radial_Boost"]
+                },
+                radial_2: {
+                    salvage: ["1x GenomicAnalysis", "1x DetailedReports", "1x ExoticIsotope"],
+                    prerequisites: ["Vigor_Radial_Boost"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["1x MeditationTechniques", "1x DetailedReports", "1x ThaumicResonator"],
-                    prerequisites: ["Vigor_Partial_Core_Revamp", "Vigor_Partial_Radial_Revamp"]
+                    prerequisites: ["Vigor_Total_Core_Revamp", "Vigor_Partial_Core_Revamp"]
                 },
                 radial: {
                     salvage: ["1x DetailedReports", "1x ArcaneCantrip", "1x SelfEvolvingAlloy"],
-                    prerequisites: ["Vigor_Partial_Core_Revamp", "Vigor_Partial_Radial_Revamp"]
+                    prerequisites: ["Vigor_Total_Radial_Revamp", "Vigor_Partial_Radial_Revamp"]
                 }
             },
         },
@@ -63,22 +71,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x MeditationTechniques", "1x EnchantedSand", "1x AncientTexts"],
+                    prerequisites: ["Spiritual_Core_Boost"]
+                },
+                core_2: {
                     salvage: ["1x SuperchargedCapacitor", "1x DetailedReports", "1x AncientTexts"],
                     prerequisites: ["Spiritual_Core_Boost"]
                 },
                 radial: {
                     salvage: ["1x SuperchargedCapacitor", "1x EnchantedSand", "1x AncientTexts"],
                     prerequisites: ["Spiritual_Radial_Boost"]
+                },
+                radial_2: {
+                    salvage: ["1x GenomicAnalysis", "1x DetailedReports", "1x ExoticIsotope"],
+                    prerequisites: ["Spiritual_Radial_Boost"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["1x MeditationTechniques", "1x DetailedReports", "1x ThaumicResonator"],
-                    prerequisites: ["Spiritual_Partial_Core_Revamp", "Spiritual_Partial_Radial_Revamp"]
+                    prerequisites: ["Spiritual_Total_Core_Revamp", "Spiritual_Partial_Core_Revamp"]
                 },
                 radial: {
                     salvage: ["1x DetailedReports", "1x ArcaneCantrip", "1x SelfEvolvingAlloy"],
-                    prerequisites: ["Spiritual_Partial_Core_Revamp", "Spiritual_Partial_Radial_Revamp"]
+                    prerequisites: ["Spiritual_Total_Radial_Revamp", "Spiritual_Partial_Radial_Revamp"]
                 }
             },
         },
@@ -101,22 +117,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x GenomicAnalysis", "1x ArcaneCantrip", "1x ExoticIsotope"],
+                    prerequisites: ["Resilient_Core_Boost"]
+                },
+                core_2: {
                     salvage: ["2x EnchantedSand", "1x SuperconductiveMembrane"],
                     prerequisites: ["Resilient_Core_Boost"]
                 },
                 radial: {
                     salvage: ["1x MeditationTechniques", "1x ArcaneCantrip", "1x ExoticIsotope"],
                     prerequisites: ["Resilient_Radial_Boost"]
+                },
+                radial_2: {
+                    salvage: ["2x EnchantedSand", "1x SuperconductiveMembrane"],
+                    prerequisites: ["Resilient_Radial_Boost"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["1x SuperchargedCapacitor", "1x DetailedReports", "1x ForbiddenTechnique"],
-                    prerequisites: ["Resilient_Partial_Core_Revamp", "Resilient_Partial_Radial_Revamp"]
+                    prerequisites: ["Resilient_Total_Core_Revamp", "Resilient_Partial_Core_Revamp"]
                 },
                 radial: {
                     salvage: ["1x EnchantedSand", "1x MeditationTechniques", "1x ThaumicResonator"],
-                    prerequisites: ["Resilient_Partial_Core_Revamp", "Resilient_Partial_Radial_Revamp"]
+                    prerequisites: ["Resilient_Total_Radial_Revamp", "Resilient_Partial_Radial_Revamp"]
                 }
             },
         },
@@ -139,22 +163,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x GenomicAnalysis", "1x ArcaneCantrip", "1x ExoticIsotope"],
+                    prerequisites: ["Nerve_Core_Boost"]
+                },
+                core_2: {
                     salvage: ["2x EnchantedSand", "1x SuperconductiveMembrane"],
                     prerequisites: ["Nerve_Core_Boost"]
                 },
                 radial: {
                     salvage: ["1x MeditationTechniques", "1x ArcaneCantrip", "1x ExoticIsotope"],
                     prerequisites: ["Nerve_Radial_Boost"]
+                },
+                radial_2: {
+                    salvage: ["2x EnchantedSand", "1x SuperconductiveMembrane"],
+                    prerequisites: ["Nerve_Radial_Boost"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["1x SuperchargedCapacitor", "1x DetailedReports", "1x ForbiddenTechnique"],
-                    prerequisites: ["Nerve_Partial_Core_Revamp", "Nerve_Partial_Radial_Revamp"]
+                    prerequisites: ["Nerve_Total_Core_Revamp", "Nerve_Partial_Core_Revamp"]
                 },
                 radial: {
                     salvage: ["1x EnchantedSand", "1x MeditationTechniques", "1x ThaumicResonator"],
-                    prerequisites: ["Nerve_Partial_Core_Revamp", "Nerve_Partial_Radial_Revamp"]
+                    prerequisites: ["Nerve_Total_Radial_Revamp", "Nerve_Partial_Radial_Revamp"]
                 }
             },
         },
@@ -177,22 +209,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["2x NanotechGrowthMedium", "1x ExoticIsotope"],
+                    prerequisites: ["Musculature_Core_Boost"]
+                },
+                core_2: {
                     salvage: ["1x GenomicAnalysis", "1x NanotechGrowthMedium", "1x SuperconductiveMembrane"],
                     prerequisites: ["Musculature_Core_Boost"]
                 },
                 radial: {
                     salvage: ["1x SuperchargedCapacitor", "1x MeditationTechniques", "1x ExoticIsotope"],
                     prerequisites: ["Musculature_Radial_Boost"]
+                },
+                radial_2: {
+                    salvage: ["1x ArcaneCantrip", "1x MeditationTechniques", "1x SuperconductiveMembrane"],
+                    prerequisites: ["Musculature_Radial_Boost"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["1x ArcaneCantrip", "1x NanotechGrowthMedium", "1x ForbiddenTechnique"],
-                    prerequisites: ["Musculature_Partial_Core_Revamp", "Musculature_Partial_Radial_Revamp"]
+                    prerequisites: ["Musculature_Total_Core_Revamp", "Musculature_Partial_Core_Revamp"]
                 },
                 radial: {
                     salvage: ["1x SuperchargedCapacitor", "1x MeditationTechniques", "1x SelfEvolvingAlloy"],
-                    prerequisites: ["Musculature_Partial_Core_Revamp", "Musculature_Partial_Radial_Revamp"]
+                    prerequisites: ["Musculature_Total_Radial_Revamp", "Musculature_Partial_Radial_Revamp"]
                 }
             },
         },
@@ -215,22 +255,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x BiomorphicGoo", "1x ArcaneCantrip", "1x SuperconductiveMembrane"],
+                    prerequisites: ["Intuition_Core_Boost"]
+                },
+                core_2: {
                     salvage: ["1x GenomicAnalysis", "1x ArcaneCantrip", "1x AncientTexts"],
                     prerequisites: ["Intuition_Core_Boost"]
                 },
                 radial: {
                     salvage: ["1x MeditationTechniques", "1x EnchantedSand", "1x ExoticIsotope"],
                     prerequisites: ["Intuition_Radial_Boost"]
+                },
+                radial_2: {
+                    salvage: ["1x DetailedReports", "1x NanotechGrowthMedium", "1x AncientTexts"],
+                    prerequisites: ["Intuition_Radial_Boost"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["1x EnchantedSand", "1x GenomicAnalysis", "1x LivingRelic"],
-                    prerequisites: ["Intuition_Partial_Core_Revamp", "Intuition_Partial_Radial_Revamp"]
+                    prerequisites: ["Intuition_Total_Core_Revamp", "Intuition_Partial_Core_Revamp"]
                 },
                 radial: {
                     salvage: ["1x EnchantedSand", "1x MeditationTechniques", "1x ThaumicResonator"],
-                    prerequisites: ["Intuition_Partial_Core_Revamp", "Intuition_Partial_Radial_Revamp"]
+                    prerequisites: ["Intuition_Total_Radial_Revamp", "Intuition_Partial_Radial_Revamp"]
                 }
             },
         },
@@ -253,22 +301,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x BiomorphicGoo", "1x ArcaneCantrip", "1x SuperconductiveMembrane"],
+                    prerequisites: ["Cardiac_Core_Boost"]
+                },
+                core_2: {
                     salvage: ["1x GenomicAnalysis", "1x ArcaneCantrip", "1x AncientTexts"],
                     prerequisites: ["Cardiac_Core_Boost"]
                 },
                 radial: {
                     salvage: ["1x MeditationTechniques", "1x EnchantedSand", "1x ExoticIsotope"],
                     prerequisites: ["Cardiac_Radial_Boost"]
+                },
+                radial_2: {
+                    salvage: ["1x DetailedReports", "1x NanotechGrowthMedium", "1x AncientTexts"],
+                    prerequisites: ["Cardiac_Radial_Boost"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["1x EnchantedSand", "1x GenomicAnalysis", "1x LivingRelic"],
-                    prerequisites: ["Cardiac_Partial_Core_Revamp", "Cardiac_Partial_Radial_Revamp"]
+                    prerequisites: ["Cardiac_Total_Core_Revamp", "Cardiac_Partial_Core_Revamp"]
                 },
                 radial: {
                     salvage: ["1x EnchantedSand", "1x MeditationTechniques", "1x ThaumicResonator"],
-                    prerequisites: ["Cardiac_Partial_Core_Revamp", "Cardiac_Partial_Radial_Revamp"]
+                    prerequisites: ["Cardiac_Total_Radial_Revamp", "Cardiac_Partial_Radial_Revamp"]
                 }
             },
         },
@@ -290,57 +346,31 @@ const IncarnateComponents = {
                 }
             },
             tier3: {
-                core_1: {
-                    salvage: ["1x GenomicAnalysis", "1x NanotechGrowthMedium", "1x ExoticIsotope"],
-                    prerequisites: ["Agility_Core_Boost"]
-                },
-                core_2: {
+                core: {
                     salvage: ["2x NanotechGrowthMedium", "1x ExoticIsotope"],
                     prerequisites: ["Agility_Core_Boost"]
                 },
-                radial_1: {
-                    salvage: ["1x SuperchargedCapacitor", "1x MeditationTechniques", "1x SelfEvolvingAlloy"],
+                core_2: {
+                    salvage: ["1x GenomicAnalysis", "1x NanotechGrowthMedium", "1x SuperconductiveMembrane"],
+                    prerequisites: ["Agility_Core_Boost"]
+                },
+                radial: {
+                    salvage: ["1x SuperchargedCapacitor", "1x MeditationTechniques", "1x ExoticIsotope"],
                     prerequisites: ["Agility_Radial_Boost"]
                 },
                 radial_2: {
-                    salvage: ["1x SuperchargedCapacitor", "1x MeditationTechniques", "1x ExoticIsotope"],
+                    salvage: ["1x ArcaneCantrip", "1x MeditationTechniques", "1x SuperconductiveMembrane"],
                     prerequisites: ["Agility_Radial_Boost"]
                 }
             },
             tier4: {
                 core: {
-                    salvage: ["1x GenomicAnalysis", "1x NanotechGrowthMedium", "1x ForbiddenTechnique"],
-                    prerequisites: [
-                        "Agility_Total_Core_Revamp",
-                        "Agility_Partial_Core_Revamp",
-                        "Agility_Total_Radial_Revamp",
-                        "Agility_Partial_Radial_Revamp"
-                    ],
-                    validCombinations: [
-                        ["Agility_Partial_Core_Revamp", "Agility_Partial_Radial_Revamp"],
-                        ["Agility_Partial_Core_Revamp", "Agility_Total_Core_Revamp"],
-                        ["Agility_Partial_Core_Revamp", "Agility_Total_Radial_Revamp"],
-                        ["Agility_Partial_Radial_Revamp", "Agility_Total_Core_Revamp"],
-                        ["Agility_Partial_Radial_Revamp", "Agility_Total_Radial_Revamp"],
-                        ["Agility_Total_Core_Revamp", "Agility_Total_Radial_Revamp"]
-                    ]
+                    salvage: ["1x ArcaneCantrip", "1x NanotechGrowthMedium", "1x ForbiddenTechnique"],
+                    prerequisites: ["Agility_Total_Core_Revamp", "Agility_Partial_Core_Revamp"]
                 },
                 radial: {
-                    salvage: ["1x ArcaneCantrip", "1x MeditationTechniques", "1x SelfEvolvingAlloy"],
-                    prerequisites: [
-                        "Agility_Total_Core_Revamp",
-                        "Agility_Partial_Core_Revamp",
-                        "Agility_Total_Radial_Revamp",
-                        "Agility_Partial_Radial_Revamp"
-                    ],
-                    validCombinations: [
-                        ["Agility_Partial_Core_Revamp", "Agility_Partial_Radial_Revamp"],
-                        ["Agility_Partial_Core_Revamp", "Agility_Total_Core_Revamp"],
-                        ["Agility_Partial_Core_Revamp", "Agility_Total_Radial_Revamp"],
-                        ["Agility_Partial_Radial_Revamp", "Agility_Total_Core_Revamp"],
-                        ["Agility_Partial_Radial_Revamp", "Agility_Total_Radial_Revamp"],
-                        ["Agility_Total_Core_Revamp", "Agility_Total_Radial_Revamp"]
-                    ]
+                    salvage: ["1x SuperchargedCapacitor", "1x MeditationTechniques", "1x SelfEvolvingAlloy"],
+                    prerequisites: ["Agility_Total_Radial_Revamp", "Agility_Partial_Radial_Revamp"]
                 }
             },
         },
@@ -901,22 +931,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x ArcaneCantrip", "1x EnchantedSand", "1x AncientTexts"],
+                    prerequisites: ["Warworks_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x ArcaneCantrip", "1x SuperchargedCapacitor", "1x SuperconductiveMembrane"],
                     prerequisites: ["Warworks_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x EnchantedSand", "1x SuperchargedCapacitor", "1x ExoticIsotope"],
                     prerequisites: ["Warworks_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x SuperchargedCapacitor", "1x GenomicAnalysis", "1x AncientTexts"],
+                    prerequisites: ["Warworks_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["1x MeditationTechniques", "1x GenomicAnalysis", "1x SelfEvolvingAlloy"],
-                    prerequisites: ["Warworks_Partial_Core_Improved_Ally", "Warworks_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Warworks_Total_Core_Improved_Ally", "Warworks_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x BiomorphicGoo", "1x SuperchargedCapacitor", "1x LivingRelic"],
-                    prerequisites: ["Warworks_Partial_Core_Improved_Ally", "Warworks_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Warworks_Total_Radial_Improved_Ally", "Warworks_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -939,22 +977,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x ArcaneCantrip", "1x EnchantedSand", "1x AncientTexts"],
+                    prerequisites: ["Vanguard_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x ArcaneCantrip", "1x SuperchargedCapacitor", "1x SuperconductiveMembrane"],
                     prerequisites: ["Vanguard_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x EnchantedSand", "1x SuperchargedCapacitor", "1x ExoticIsotope"],
                     prerequisites: ["Vanguard_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x SuperchargedCapacitor", "1x GenomicAnalysis", "1x AncientTexts"],
+                    prerequisites: ["Vanguard_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["1x MeditationTechniques", "1x GenomicAnalysis", "1x SelfEvolvingAlloy"],
-                    prerequisites: ["Vanguard_Partial_Core_Improved_Ally", "Vanguard_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Vanguard_Total_Core_Improved_Ally", "Vanguard_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x BiomorphicGoo", "1x SuperchargedCapacitor", "1x LivingRelic"],
-                    prerequisites: ["Vanguard_Partial_Core_Improved_Ally", "Vanguard_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Vanguard_Total_Radial_Improved_Ally", "Vanguard_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -977,22 +1023,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x BiomorphicGoo", "1x EnchantedSand", "1x SuperconductiveMembrane"],
+                    prerequisites: ["Tsoo_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["2x EnchantedSand", "1x SuperconductiveMembrane"],
                     prerequisites: ["Tsoo_Core_Ally"]
                 },
                 radial: {
                     salvage: ["2x EnchantedSand", "1x SemiConsciousEnergy"],
                     prerequisites: ["Tsoo_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x DetailedReports", "1x EnchantedSand", "1x AncientTexts"],
+                    prerequisites: ["Tsoo_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["2x GenomicAnalysis", "1x ThaumicResonator"],
-                    prerequisites: ["Tsoo_Partial_Core_Improved_Ally", "Tsoo_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Tsoo_Total_Core_Improved_Ally", "Tsoo_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x EnchantedSand", "1x BiomorphicGoo", "1x ForbiddenTechnique"],
-                    prerequisites: ["Tsoo_Partial_Core_Improved_Ally", "Tsoo_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Tsoo_Total_Radial_Improved_Ally", "Tsoo_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1015,22 +1069,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x MeditationTechniques", "1x GenomicAnalysis", "1x SemiConsciousEnergy"],
+                    prerequisites: ["Talons_of_Vengeance_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x MeditationTechniques", "1x GenomicAnalysis", "1x SuperconductiveMembrane"],
                     prerequisites: ["Talons_of_Vengeance_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x MeditationTechniques", "1x GenomicAnalysis", "1x SuperconductiveMembrane"],
                     prerequisites: ["Talons_of_Vengeance_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x EnchantedSand", "1x BiomorphicGoo", "1x AncientTexts"],
+                    prerequisites: ["Talons_of_Vengeance_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["2x GenomicAnalysis", "1x LivingRelic"],
-                    prerequisites: ["Talons_of_Vengeance_Partial_Core_Improved_Ally", "Talons_of_Vengeance_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Talons_of_Vengeance_Total_Core_Improved_Ally", "Talons_of_Vengeance_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x GenomicAnalysis", "1x ArcaneCantrip", "1x ForbiddenTechnique"],
-                    prerequisites: ["Talons_of_Vengeance_Partial_Core_Improved_Ally", "Talons_of_Vengeance_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Talons_of_Vengeance_Total_Radial_Improved_Ally", "Talons_of_Vengeance_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1053,22 +1115,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x BiomorphicGoo", "1x EnchantedSand", "1x SuperconductiveMembrane"],
+                    prerequisites: ["Storm_Elemental_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["2x EnchantedSand", "1x SuperconductiveMembrane"],
                     prerequisites: ["Storm_Elemental_Core_Ally"]
                 },
                 radial: {
                     salvage: ["2x EnchantedSand", "1x SemiConsciousEnergy"],
                     prerequisites: ["Storm_Elemental_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x DetailedReports", "1x EnchantedSand", "1x AncientTexts"],
+                    prerequisites: ["Storm_Elemental_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["2x GenomicAnalysis", "1x ThaumicResonator"],
-                    prerequisites: ["Storm_Elemental_Partial_Core_Improved_Ally", "Storm_Elemental_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Storm_Elemental_Total_Core_Improved_Ally", "Storm_Elemental_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x EnchantedSand", "1x BiomorphicGoo", "1x ForbiddenTechnique"],
-                    prerequisites: ["Storm_Elemental_Partial_Core_Improved_Ally", "Storm_Elemental_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Storm_Elemental_Total_Radial_Improved_Ally", "Storm_Elemental_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1091,22 +1161,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x BiomorphicGoo", "1x NanotechGrowthMedium", "1x SuperconductiveMembrane"],
+                    prerequisites: ["Seers_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x EnchantedSand", "1x NanotechGrowthMedium", "1x SuperconductiveMembrane"],
                     prerequisites: ["Seers_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x NanotechGrowthMedium", "1x EnchantedSand", "1x SemiConsciousEnergy"],
                     prerequisites: ["Seers_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x DetailedReports", "1x EnchantedSand", "1x AncientTexts"],
+                    prerequisites: ["Seers_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["2x GenomicAnalysis", "1x ThaumicResonator"],
-                    prerequisites: ["Seers_Partial_Core_Improved_Ally", "Seers_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Seers_Total_Core_Improved_Ally", "Seers_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x NanotechGrowthMedium", "1x BiomorphicGoo", "1x ForbiddenTechnique"],
-                    prerequisites: ["Seers_Partial_Core_Improved_Ally", "Seers_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Seers_Total_Radial_Improved_Ally", "Seers_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1129,22 +1207,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x MeditationTechniques", "1x GenomicAnalysis", "1x SemiConsciousEnergy"],
+                    prerequisites: ["Rularuu_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x MeditationTechniques", "1x GenomicAnalysis", "1x SuperconductiveMembrane"],
                     prerequisites: ["Rularuu_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x MeditationTechniques", "1x GenomicAnalysis", "1x SuperconductiveMembrane"],
                     prerequisites: ["Rularuu_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x EnchantedSand", "1x BiomorphicGoo", "1x AncientTexts"],
+                    prerequisites: ["Rularuu_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["2x GenomicAnalysis", "1x LivingRelic"],
-                    prerequisites: ["Rularuu_Partial_Core_Improved_Ally", "Rularuu_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Rularuu_Total_Core_Improved_Ally", "Rularuu_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x GenomicAnalysis", "1x ArcaneCantrip", "1x ForbiddenTechnique"],
-                    prerequisites: ["Rularuu_Partial_Core_Improved_Ally", "Rularuu_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Rularuu_Total_Radial_Improved_Ally", "Rularuu_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1167,22 +1253,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x MeditationTechniques", "1x NanotechGrowthMedium", "1x ExoticIsotope"],
+                    prerequisites: ["Robotic_Drones_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x MeditationTechniques", "1x GenomicAnalysis", "1x SuperconductiveMembrane"],
                     prerequisites: ["Robotic_Drones_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x MeditationTechniques", "1x NanotechGrowthMedium", "1x SuperconductiveMembrane"],
                     prerequisites: ["Robotic_Drones_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x EnchantedSand", "1x BiomorphicGoo", "1x AncientTexts"],
+                    prerequisites: ["Robotic_Drones_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["2x NanotechGrowthMedium", "1x ThaumicResonator"],
-                    prerequisites: ["Robotic_Drones_Partial_Core_Improved_Ally", "Robotic_Drones_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Robotic_Drones_Total_Core_Improved_Ally", "Robotic_Drones_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x NanotechGrowthMedium", "1x ArcaneCantrip", "1x SelfEvolvingAlloy"],
-                    prerequisites: ["Robotic_Drones_Partial_Core_Improved_Ally", "Robotic_Drones_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Robotic_Drones_Total_Radial_Improved_Ally", "Robotic_Drones_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1205,22 +1299,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x MeditationTechniques", "1x DetailedReports", "1x ExoticIsotope"],
+                    prerequisites: ["Rikti_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x MeditationTechniques", "1x DetailedReports", "1x SuperconductiveMembrane"],
                     prerequisites: ["Rikti_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x MeditationTechniques", "1x DetailedReports", "1x SuperconductiveMembrane"],
                     prerequisites: ["Rikti_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x EnchantedSand", "1x BiomorphicGoo", "1x AncientTexts"],
+                    prerequisites: ["Rikti_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["1x GenomicAnalysis", "1x DetailedReports", "1x LivingRelic"],
-                    prerequisites: ["Rikti_Partial_Core_Improved_Ally", "Rikti_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Rikti_Total_Core_Improved_Ally", "Rikti_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x GenomicAnalysis", "1x ArcaneCantrip", "1x SelfEvolvingAlloy"],
-                    prerequisites: ["Rikti_Partial_Core_Improved_Ally", "Rikti_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Rikti_Total_Radial_Improved_Ally", "Rikti_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1243,22 +1345,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x MeditationTechniques", "1x ArcaneCantrip", "1x AncientTexts"],
+                    prerequisites: ["Polar_Lights_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x MeditationTechniques", "1x GenomicAnalysis", "1x SuperconductiveMembrane"],
                     prerequisites: ["Polar_Lights_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x MeditationTechniques", "1x ArcaneCantrip", "1x SemiConsciousEnergy"],
                     prerequisites: ["Polar_Lights_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x EnchantedSand", "1x BiomorphicGoo", "1x AncientTexts"],
+                    prerequisites: ["Polar_Lights_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["2x ArcaneCantrip", "1x LivingRelic"],
-                    prerequisites: ["Polar_Lights_Partial_Core_Improved_Ally", "Polar_Lights_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Polar_Lights_Total_Core_Improved_Ally", "Polar_Lights_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["2x ArcaneCantrip", "1x ForbiddenTechnique"],
-                    prerequisites: ["Polar_Lights_Partial_Core_Improved_Ally", "Polar_Lights_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Polar_Lights_Total_Radial_Improved_Ally", "Polar_Lights_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1281,22 +1391,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x MeditationTechniques", "1x EnchantedSand", "1x AncientTexts"],
+                    prerequisites: ["Phantom_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x MeditationTechniques", "1x GenomicAnalysis", "1x SuperconductiveMembrane"],
                     prerequisites: ["Phantom_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x MeditationTechniques", "1x EnchantedSand", "1x ExoticIsotope"],
                     prerequisites: ["Phantom_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x EnchantedSand", "1x BiomorphicGoo", "1x SemiConsciousEnergy"],
+                    prerequisites: ["Phantom_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["2x EnchantedSand", "1x LivingRelic"],
-                    prerequisites: ["Phantom_Partial_Core_Improved_Ally", "Phantom_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Phantom_Total_Core_Improved_Ally", "Phantom_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x EnchantedSand", "1x ArcaneCantrip", "1x ForbiddenTechnique"],
-                    prerequisites: ["Phantom_Partial_Core_Improved_Ally", "Phantom_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Phantom_Total_Radial_Improved_Ally", "Phantom_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1319,22 +1437,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x MeditationTechniques", "1x NanotechGrowthMedium", "1x SemiConsciousEnergy"],
+                    prerequisites: ["Nemesis_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x MeditationTechniques", "1x GenomicAnalysis", "1x ExoticIsotope"],
                     prerequisites: ["Nemesis_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x MeditationTechniques", "1x NanotechGrowthMedium", "1x SuperconductiveMembrane"],
                     prerequisites: ["Nemesis_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x EnchantedSand", "1x BiomorphicGoo", "1x SemiConsciousEnergy"],
+                    prerequisites: ["Nemesis_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["2x NanotechGrowthMedium", "1x LivingRelic"],
-                    prerequisites: ["Nemesis_Partial_Core_Improved_Ally", "Nemesis_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Nemesis_Total_Core_Improved_Ally", "Nemesis_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x NanotechGrowthMedium", "1x ArcaneCantrip", "1x SelfEvolvingAlloy"],
-                    prerequisites: ["Nemesis_Partial_Core_Improved_Ally", "Nemesis_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Nemesis_Total_Radial_Improved_Ally", "Nemesis_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1357,22 +1483,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x MeditationTechniques", "1x NanotechGrowthMedium", "1x ExoticIsotope"],
+                    prerequisites: ["Longbow_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x MeditationTechniques", "1x GenomicAnalysis", "1x SemiConsciousEnergy"],
                     prerequisites: ["Longbow_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x MeditationTechniques", "1x NanotechGrowthMedium", "1x ExoticIsotope"],
                     prerequisites: ["Longbow_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x EnchantedSand", "1x BiomorphicGoo", "1x SemiConsciousEnergy"],
+                    prerequisites: ["Longbow_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["2x NanotechGrowthMedium", "1x ThaumicResonator"],
-                    prerequisites: ["Longbow_Partial_Core_Improved_Ally", "Longbow_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Longbow_Total_Core_Improved_Ally", "Longbow_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x NanotechGrowthMedium", "1x ArcaneCantrip", "1x SelfEvolvingAlloy"],
-                    prerequisites: ["Longbow_Partial_Core_Improved_Ally", "Longbow_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Longbow_Total_Radial_Improved_Ally", "Longbow_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1395,22 +1529,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x ArcaneCantrip", "1x NanotechGrowthMedium", "1x SemiConsciousEnergy"],
+                    prerequisites: ["Knives_of_Vengeance_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x MeditationTechniques", "1x GenomicAnalysis", "1x SuperconductiveMembrane"],
                     prerequisites: ["Knives_of_Vengeance_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x MeditationTechniques", "1x NanotechGrowthMedium", "1x SuperconductiveMembrane"],
                     prerequisites: ["Knives_of_Vengeance_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x EnchantedSand", "1x BiomorphicGoo", "1x AncientTexts"],
+                    prerequisites: ["Knives_of_Vengeance_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["2x NanotechGrowthMedium", "1x LivingRelic"],
-                    prerequisites: ["Knives_of_Vengeance_Partial_Core_Improved_Ally", "Knives_of_Vengeance_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Knives_of_Vengeance_Total_Core_Improved_Ally", "Knives_of_Vengeance_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x NanotechGrowthMedium", "1x ArcaneCantrip", "1x ThaumicResonator"],
-                    prerequisites: ["Knives_of_Vengeance_Partial_Core_Improved_Ally", "Knives_of_Vengeance_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Knives_of_Vengeance_Total_Radial_Improved_Ally", "Knives_of_Vengeance_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1433,22 +1575,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x ArcaneCantrip", "1x NanotechGrowthMedium", "1x SemiConsciousEnergy"],
+                    prerequisites: ["IDF_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x MeditationTechniques", "1x GenomicAnalysis", "1x SuperconductiveMembrane"],
                     prerequisites: ["IDF_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x MeditationTechniques", "1x NanotechGrowthMedium", "1x SuperconductiveMembrane"],
                     prerequisites: ["IDF_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x EnchantedSand", "1x BiomorphicGoo", "1x AncientTexts"],
+                    prerequisites: ["IDF_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["2x NanotechGrowthMedium", "1x LivingRelic"],
-                    prerequisites: ["IDF_Partial_Core_Improved_Ally", "IDF_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["IDF_Total_Core_Improved_Ally", "IDF_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x NanotechGrowthMedium", "1x ArcaneCantrip", "1x ThaumicResonator"],
-                    prerequisites: ["IDF_Partial_Core_Improved_Ally", "IDF_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["IDF_Total_Radial_Improved_Ally", "IDF_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1471,22 +1621,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["2x MeditationTechniques", "1x SemiConsciousEnergy"],
+                    prerequisites: ["Clockwork_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x GenomicAnalysis", "1x DetailedReports", "1x ExoticIsotope"],
                     prerequisites: ["Clockwork_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x GenomicAnalysis", "1x BiomorphicGoo", "1x AncientTexts"],
                     prerequisites: ["Clockwork_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x ArcaneCantrip", "1x MeditationTechniques", "1x ExoticIsotope"],
+                    prerequisites: ["Clockwork_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["1x SuperchargedCapacitor", "1x MeditationTechniques", "1x ThaumicResonator"],
-                    prerequisites: ["Clockwork_Partial_Core_Improved_Ally", "Clockwork_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Clockwork_Total_Core_Improved_Ally", "Clockwork_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x SuperchargedCapacitor", "1x DetailedReports", "1x ForbiddenTechnique"],
-                    prerequisites: ["Clockwork_Partial_Core_Improved_Ally", "Clockwork_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Clockwork_Total_Radial_Improved_Ally", "Clockwork_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1509,22 +1667,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["2x MeditationTechniques", "1x SemiConsciousEnergy"],
+                    prerequisites: ["Cimeroran_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x GenomicAnalysis", "1x DetailedReports", "1x ExoticIsotope"],
                     prerequisites: ["Cimeroran_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x GenomicAnalysis", "1x BiomorphicGoo", "1x AncientTexts"],
                     prerequisites: ["Cimeroran_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x ArcaneCantrip", "1x MeditationTechniques", "1x ExoticIsotope"],
+                    prerequisites: ["Cimeroran_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["1x SuperchargedCapacitor", "1x MeditationTechniques", "1x ThaumicResonator"],
-                    prerequisites: ["Cimeroran_Partial_Core_Improved_Ally", "Cimeroran_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Cimeroran_Total_Core_Improved_Ally", "Cimeroran_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x SuperchargedCapacitor", "1x DetailedReports", "1x ForbiddenTechnique"],
-                    prerequisites: ["Cimeroran_Partial_Core_Improved_Ally", "Cimeroran_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Cimeroran_Total_Radial_Improved_Ally", "Cimeroran_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1547,22 +1713,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["2x BiomorphicGoo", "1x SemiConsciousEnergy"],
+                    prerequisites: ["Carnival_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x GenomicAnalysis", "1x DetailedReports", "1x SemiConsciousEnergy"],
                     prerequisites: ["Carnival_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x GenomicAnalysis", "1x BiomorphicGoo", "1x AncientTexts"],
                     prerequisites: ["Carnival_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x ArcaneCantrip", "1x BiomorphicGoo", "1x ExoticIsotope"],
+                    prerequisites: ["Carnival_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["1x SuperchargedCapacitor", "1x BiomorphicGoo", "1x ThaumicResonator"],
-                    prerequisites: ["Carnival_Partial_Core_Improved_Ally", "Carnival_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Carnival_Total_Core_Improved_Ally", "Carnival_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x SuperchargedCapacitor", "1x DetailedReports", "1x ForbiddenTechnique"],
-                    prerequisites: ["Carnival_Partial_Core_Improved_Ally", "Carnival_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Carnival_Total_Radial_Improved_Ally", "Carnival_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1585,22 +1759,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["1x MeditationTechniques", "1x NanotechGrowthMedium", "1x ExoticIsotope"],
+                    prerequisites: ["Banished_Pantheon_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x MeditationTechniques", "1x GenomicAnalysis", "1x SemiConsciousEnergy"],
                     prerequisites: ["Banished_Pantheon_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x MeditationTechniques", "1x NanotechGrowthMedium", "1x ExoticIsotope"],
                     prerequisites: ["Banished_Pantheon_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x EnchantedSand", "1x BiomorphicGoo", "1x SemiConsciousEnergy"],
+                    prerequisites: ["Banished_Pantheon_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["2x NanotechGrowthMedium", "1x ThaumicResonator"],
-                    prerequisites: ["Banished_Pantheon_Partial_Core_Improved_Ally", "Banished_Pantheon_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Banished_Pantheon_Total_Core_Improved_Ally", "Banished_Pantheon_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x NanotechGrowthMedium", "1x ArcaneCantrip", "1x SelfEvolvingAlloy"],
-                    prerequisites: ["Banished_Pantheon_Partial_Core_Improved_Ally", "Banished_Pantheon_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Banished_Pantheon_Total_Radial_Improved_Ally", "Banished_Pantheon_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1623,22 +1805,30 @@ const IncarnateComponents = {
             },
             tier3: {
                 core: {
+                    salvage: ["2x BiomorphicGoo", "1x SemiConsciousEnergy"],
+                    prerequisites: ["Arachnos_Core_Ally"]
+                },
+                core_2: {
                     salvage: ["1x GenomicAnalysis", "1x DetailedReports", "1x ExoticIsotope"],
                     prerequisites: ["Arachnos_Core_Ally"]
                 },
                 radial: {
                     salvage: ["1x GenomicAnalysis", "1x BiomorphicGoo", "1x AncientTexts"],
                     prerequisites: ["Arachnos_Radial_Ally"]
+                },
+                radial_2: {
+                    salvage: ["1x ArcaneCantrip", "1x BiomorphicGoo", "1x ExoticIsotope"],
+                    prerequisites: ["Arachnos_Radial_Ally"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["1x SuperchargedCapacitor", "1x BiomorphicGoo", "1x ThaumicResonator"],
-                    prerequisites: ["Arachnos_Partial_Core_Improved_Ally", "Arachnos_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Arachnos_Total_Core_Improved_Ally", "Arachnos_Partial_Core_Improved_Ally"]
                 },
                 radial: {
                     salvage: ["1x SuperchargedCapacitor", "1x DetailedReports", "1x SelfEvolvingAlloy"],
-                    prerequisites: ["Arachnos_Partial_Core_Improved_Ally", "Arachnos_Partial_Radial_Improved_Ally"]
+                    prerequisites: ["Arachnos_Total_Radial_Improved_Ally", "Arachnos_Partial_Radial_Improved_Ally"]
                 }
             },
         },
@@ -1856,21 +2046,21 @@ const IncarnateComponents = {
             tier3: {
                 core: {
                     salvage: ["1x NanotechGrowthMedium", "1x DetailedReports", "1x ExoticIsotope"],
-                    prerequisites: ["Support_Genome_2"]
+                    prerequisites: ["Support_Core_Genome"]
                 },
                 radial: {
                     salvage: ["1x MeditationTechniques", "1x EnchantedSand", "1x ExoticIsotope"],
-                    prerequisites: ["Support_Genome_3"]
+                    prerequisites: ["Support_Radial_Genome"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["1x GenomicAnalysis", "1x BiomorphicGoo", "1x SelfEvolvingAlloy"],
-                    prerequisites: ["Support_Genome_5", "Support_Genome_6"]
+                    prerequisites: ["Support_Partial_Core_Graft", "Support_Partial_Radial_Graft"]
                 },
                 radial: {
                     salvage: ["1x BiomorphicGoo", "1x EnchantedSand", "1x ThaumicResonator"],
-                    prerequisites: ["Support_Genome_5", "Support_Genome_6"]
+                    prerequisites: ["Support_Partial_Core_Graft", "Support_Partial_Radial_Graft"]
                 }
             },
         },
@@ -1884,31 +2074,31 @@ const IncarnateComponents = {
             tier2: {
                 core: {
                     salvage: ["1x BiomorphicGoo", "1x DetailedReports", "1x WornSpellbook"],
-                    prerequisites: ["Melee_Genome_1"]
+                    prerequisites: ["Melee_Genome"]
                 },
                 radial: {
                     salvage: ["1x NanotechGrowthMedium", "1x DetailedReports", "1x GluonCompound"],
-                    prerequisites: ["Melee_Genome_1"]
+                    prerequisites: ["Melee_Genome"]
                 }
             },
             tier3: {
                 core: {
                     salvage: ["1x BiomorphicGoo", "1x MeditationTechniques", "1x AncientTexts"],
-                    prerequisites: ["Melee_Genome_2"]
+                    prerequisites: ["Melee_Core_Genome"]
                 },
                 radial: {
                     salvage: ["1x MeditationTechniques", "1x SuperchargedCapacitor", "1x ExoticIsotope"],
-                    prerequisites: ["Melee_Genome_3"]
+                    prerequisites: ["Melee_Radial_Genome"]
                 }
             },
             tier4: {
                 core: {
                     salvage: ["1x GenomicAnalysis", "1x MeditationTechniques", "1x ThaumicResonator"],
-                    prerequisites: ["Melee_Genome_5", "Melee_Genome_6"]
+                    prerequisites: ["Melee_Partial_Core_Graft", "Melee_Partial_Radial_Graft"]
                 },
                 radial: {
                     salvage: ["1x SuperchargedCapacitor", "1x NanotechGrowthMedium", "1x LivingRelic"],
-                    prerequisites: ["Melee_Genome_5", "Melee_Genome_6"]
+                    prerequisites: ["Melee_Partial_Core_Graft", "Melee_Partial_Radial_Graft"]
                 }
             },
         },

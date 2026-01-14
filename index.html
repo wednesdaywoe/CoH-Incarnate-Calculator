@@ -1770,7 +1770,7 @@ function buildNodesFromTreeData(treeName) {
             }
             
             // Get the actual power name from the game (e.g., "Agility Total Core Revamp")
-            const actualPowerName = getActualPowerName(treeName, tierId);
+            const actualPowerName = getActualPowerName(treeName, tierId, currentSlot);
             
             // Build full name including slot and actual power name
             const slotDisplay = currentSlot.charAt(0).toUpperCase() + currentSlot.slice(1);
@@ -1794,25 +1794,85 @@ function buildNodesFromTreeData(treeName) {
     return nodes;
 }
 
-// Map tier IDs to their corresponding power name suffixes
-function getTierSuffix(tierId) {
-    const suffixMap = {
-        't1': 'Boost',
-        't2_core': 'Core Paragon',
-        't2_radial': 'Radial Paragon',
-        't3_core_1': 'Partial Core Revamp',
-        't3_core_2': 'Partial Core Revamp',
-        't3_radial_1': 'Partial Radial Revamp',
-        't3_radial_2': 'Partial Radial Revamp',
-        't4_core': 'Total Core Revamp',
-        't4_radial': 'Total Radial Revamp'
+// Map tier IDs to their corresponding power name suffixes (slot-aware)
+function getTierSuffix(tierId, slot) {
+    // Slot-specific suffix mappings
+    const slotSuffixes = {
+        alpha: {
+            't1': 'Boost',
+            't2_core': 'Core Boost',
+            't2_radial': 'Radial Boost',
+            't3_core_1': 'Total Core Revamp',
+            't3_core_2': 'Partial Core Revamp',
+            't3_radial_1': 'Partial Radial Revamp',
+            't3_radial_2': 'Total Radial Revamp',
+            't4_core': 'Core Paragon',
+            't4_radial': 'Radial Paragon'
+        },
+        judgement: {
+            't1': 'Judgement',
+            't2_core': 'Core Judgement',
+            't2_radial': 'Radial Judgement',
+            't3_core_1': 'Total Core Judgement',
+            't3_core_2': 'Partial Core Judgement',
+            't3_radial_1': 'Partial Radial Judgement',
+            't3_radial_2': 'Total Radial Judgement',
+            't4_core': 'Core Final Judgement',
+            't4_radial': 'Radial Final Judgement'
+        },
+        interface: {
+            't1': 'Interface',
+            't2_core': 'Core Interface',
+            't2_radial': 'Radial Interface',
+            't3_core_1': 'Total Core Conversion',
+            't3_core_2': 'Partial Core Conversion',
+            't3_radial_1': 'Partial Radial Conversion',
+            't3_radial_2': 'Total Radial Conversion',
+            't4_core': 'Core Flawless Interface',
+            't4_radial': 'Radial Flawless Interface'
+        },
+        lore: {
+            't1': 'Ally',
+            't2_core': 'Core Ally',
+            't2_radial': 'Radial Ally',
+            't3_core_1': 'Total Core Improved Ally',
+            't3_core_2': 'Partial Core Improved Ally',
+            't3_radial_1': 'Partial Radial Improved Ally',
+            't3_radial_2': 'Total Radial Improved Ally',
+            't4_core': 'Core Superior Ally',
+            't4_radial': 'Radial Superior Ally'
+        },
+        destiny: {
+            't1': 'Invocation',
+            't2_core': 'Core Invocation',
+            't2_radial': 'Radial Invocation',
+            't3_core_1': 'Total Core Invocation',
+            't3_core_2': 'Partial Core Invocation',
+            't3_radial_1': 'Partial Radial Invocation',
+            't3_radial_2': 'Total Radial Invocation',
+            't4_core': 'Core Epiphany',
+            't4_radial': 'Radial Epiphany'
+        },
+        hybrid: {
+            't1': 'Genome',
+            't2_core': 'Core Genome',
+            't2_radial': 'Radial Genome',
+            't3_core_1': 'Total Core Graft',
+            't3_core_2': 'Partial Core Graft',
+            't3_radial_1': 'Partial Radial Graft',
+            't3_radial_2': 'Total Radial Graft',
+            't4_core': 'Core Embodiment',
+            't4_radial': 'Radial Embodiment'
+        }
     };
+
+    const suffixMap = slotSuffixes[slot] || slotSuffixes.alpha;
     return suffixMap[tierId] || 'Unknown';
 }
 
 // Build the actual power name (e.g., "Agility Total Core Revamp")
-function getActualPowerName(treeName, tierId) {
-    const suffix = getTierSuffix(tierId);
+function getActualPowerName(treeName, tierId, slot) {
+    const suffix = getTierSuffix(tierId, slot);
     return `${treeName} ${suffix}`;
 }
 
@@ -2539,7 +2599,7 @@ function restoreSlotPanelUI(slot, selection) {
     
     // Build the node name from the tree name and node ID
     const slotDisplay = slot.charAt(0).toUpperCase() + slot.slice(1);
-    const actualPowerName = getActualPowerName(selection.tree, selection.nodeId);
+    const actualPowerName = getActualPowerName(selection.tree, selection.nodeId, slot);
     const nodeName = `${slotDisplay} - ${actualPowerName}`;
     
     // Update selection text
