@@ -266,7 +266,7 @@ function openStatsSelector() {
         openStatsSelector(); // Reopen to show updated checkboxes
         updateStatsDashboard();
     };
-    
+
     const closeBtn = document.createElement('button');
     closeBtn.textContent = 'Done';
     closeBtn.style.marginLeft = 'auto';
@@ -274,13 +274,14 @@ function openStatsSelector() {
         closeStatsSelector();
         updateStatsDashboard();
     };
-    
+
     buttonContainer.appendChild(resetBtn);
     buttonContainer.appendChild(closeBtn);
     content.appendChild(buttonContainer);
-    
+
+
     modal.appendChild(content);
-    
+
     // Close on background click
     modal.onclick = (e) => {
         if (e.target === modal) {
@@ -288,7 +289,7 @@ function openStatsSelector() {
             updateStatsDashboard();
         }
     };
-    
+
     document.body.appendChild(modal);
 }
 
