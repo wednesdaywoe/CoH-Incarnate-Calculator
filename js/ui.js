@@ -109,6 +109,29 @@ function updatePowerSlots(powerName) {
             : createEmptySlotElement(powerName, index);
         slotsContainer.appendChild(slot);
     });
+
+        // Add right-click cycling for tier 4 incarnate powers
+        if (power.isIncarnate && power.tier === 4) {
+            // Find the DOM element for this power
+            const powerElem = slotsContainer.closest('.selected-power');
+            if (powerElem) {
+                powerElem.oncontextmenu = (e) => {
+                    e.preventDefault();
+                    // Cycle between core/radial for tier 4
+                    const variants = ['core', 'radial'];
+                    let currentVariant = power.variant || 'core';
+                    let nextIndex = (variants.indexOf(currentVariant) + 1) % variants.length;
+                    let nextVariant = variants[nextIndex];
+                    power.variant = nextVariant;
+                    // Update the power name and display
+                    if (typeof IncarnateRecipes !== 'undefined' && IncarnateRecipes.getPowerName) {
+                        power.name = IncarnateRecipes.getPowerName(power.slot, power.tree, 4, nextVariant);
+                    }
+                    updatePowerSlots(power.name);
+                    recalculateStats && recalculateStats();
+                };
+            }
+        }
     
     // Add ghost + button if not at max slots
     if (power.slots.length < power.maxSlots) {
