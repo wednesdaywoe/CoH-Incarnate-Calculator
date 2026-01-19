@@ -609,45 +609,45 @@ const IncarnateComponents = {
         Mighty: {
             tier1: {
                 core: {
-                    salvage: ["1x BiomorphicGoo", "1x MeditationTechniques", "1x GenomicAnalysis"],
+                    salvage: ["1x GenomicAnalysis", "1x EnchantedSand", "1x ArcaneCantrip"],
                     prerequisites: []
                 },
             },
             tier2: {
                 core: {
-                    salvage: ["1x ArcaneCantrip", "1x DetailedReports", "1x WornSpellbook"],
+                    salvage: ["1x DetailedReports", "1x ArcaneCantrip", "1x WornSpellbook"],
                     prerequisites: ["Mighty_Judgement"]
                 },
                 radial: {
-                    salvage: ["1x ArcaneCantrip", "1x DetailedReports", "1x WornSpellbook"],
+                    salvage: ["1x ArcaneCantrip", "1x GenomicAnalysis", "1x DimensionalPocket"],
                     prerequisites: ["Mighty_Judgement"]
                 }
             },
             tier3: {
                 core: {
-                    salvage: ["1x GenomicAnalysis", "1x NanotechGrowthMedium", "1x SuperconductiveMembrane"],
+                    salvage: ["1x DetailedReports", "1x NanotechGrowthMedium", "1x AncientTexts"],
                     prerequisites: ["Mighty_Core_Judgement"]
                 },
                 core_2: {
-                    salvage: ["2x NanotechGrowthMedium", "1x ExoticIsotope"],
+                    salvage: ["2x GenomicAnalysis", "1x SemiConsciousEnergy"],
                     prerequisites: ["Mighty_Core_Judgement"]
                 },
                 radial: {
-                    salvage: ["1x SuperchargedCapacitor", "1x MeditationTechniques", "1x ExoticIsotope"],
+                    salvage: ["1x EnchantedSand", "1x GenomicAnalysis", "1x ExoticIsotope"],
                     prerequisites: ["Mighty_Radial_Judgement"]
                 },
                 radial_2: {
-                    salvage: ["1x ArcaneCantrip", "1x MeditationTechniques", "1x SuperconductiveMembrane"],
+                    salvage: ["1x NanotechGrowthMedium", "1x SuperchargedCapacitor", "1x ExoticIsotope"],
                     prerequisites: ["Mighty_Radial_Judgement"]
                 }
             },
             tier4: {
                 core: {
-                    salvage: ["1x ArcaneCantrip", "1x NanotechGrowthMedium", "1x ExoticIsotope"],
+                    salvage: ["1x DetailedReports", "1x ArcaneCantrip", "1x LivingRelic"],
                     prerequisites: ["Mighty_Total_Core_Judgement", "Mighty_Partial_Core_Judgement"]
                 },
                 radial: {
-                    salvage: ["1x SuperchargedCapacitor", "1x MeditationTechniques", "1x SelfEvolvingAlloy"],
+                    salvage: ["1x NanotechGrowthMedium", "1x MeditationTechniques", "1x ForbiddenTechnique"],
                     prerequisites: ["Mighty_Total_Radial_Judgement", "Mighty_Partial_Radial_Judgement"]
                 }
             },
