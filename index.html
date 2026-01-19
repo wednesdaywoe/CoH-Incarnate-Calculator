@@ -1582,10 +1582,13 @@ function updateComponentsList() {
         return;
     }
     
-    // Sort by rarity (common -> uncommon -> rare -> very rare)
+    // Sort by rarity (common -> uncommon -> rare -> very rare), then alphabetically within each rarity
     const rarityOrder = { 'common': 1, 'uncommon': 2, 'rare': 3, 'very-rare': 4 };
     const sortedComponents = Object.entries(allComponents).sort((a, b) => {
-        return rarityOrder[a[1].rarity] - rarityOrder[b[1].rarity];
+        const rarityDiff = rarityOrder[a[1].rarity] - rarityOrder[b[1].rarity];
+        if (rarityDiff !== 0) return rarityDiff;
+        // Alphabetical sort within same rarity
+        return a[0].localeCompare(b[0]);
     });
     
     listEl.innerHTML = sortedComponents.map(([name, data]) => {
@@ -2433,10 +2436,12 @@ function populateSlotContent(slot, tree, nodeId) {
         }
     });
     
-    // Sort by rarity
+    // Sort by rarity, then alphabetically within each rarity
     const rarityOrder = { 'common': 1, 'uncommon': 2, 'rare': 3, 'very-rare': 4 };
     const sortedComponents = Object.entries(components).sort((a, b) => {
-        return rarityOrder[a[1].rarity] - rarityOrder[b[1].rarity];
+        const rarityDiff = rarityOrder[a[1].rarity] - rarityOrder[b[1].rarity];
+        if (rarityDiff !== 0) return rarityDiff;
+        return a[0].localeCompare(b[0]);
     });
     
     // Build HTML for slot content
