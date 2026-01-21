@@ -2176,16 +2176,6 @@ const IncarnatePowerInfo = {
         damageType: 'None'
       },
       't3_radial_1': {
-        desc: "Adds a damage resistance debuff proc (25% chance) and a moderate Fire damage over time proc (75% chance) to most damaging attacks.",
-        targets: 'Self',
-        range: '0',
-        radius: '0',
-        arc: '0',
-        effects: [],
-        baseStats: {},
-        damageType: 'None'
-      },
-      't3_radial_2': {
         desc: "Adds a damage resistance debuff proc (25% chance) and a moderate Fire damage over time proc (50% chance) to most damaging attacks.",
         targets: 'Self',
         range: '0',
@@ -2195,8 +2185,18 @@ const IncarnatePowerInfo = {
         baseStats: {},
         damageType: 'None'
       },
+      't3_radial_2': {
+        desc: "Adds a damage resistance debuff proc (25% chance) and a moderate Fire damage over time proc (75% chance) to most damaging attacks.",
+        targets: 'Self',
+        range: '0',
+        radius: '0',
+        arc: '0',
+        effects: [],
+        baseStats: {},
+        damageType: 'None'
+      },
       't4_core': {
-        desc: "Adds a damage resistance debuff proc (75% chance) to most damaging attacks.",
+        desc: "Adds a damage resistance debuff proc (75% chance) and a moderate Fire damage over time proc (50% chance) to most damaging attacks.",
         targets: 'Self',
         range: '0',
         radius: '0',
@@ -2206,7 +2206,7 @@ const IncarnatePowerInfo = {
         damageType: 'None'
       },
       't4_radial': {
-        desc: "Adds a moderate Fire damage over time proc (75% chance) to most damaging attacks.",
+        desc: "Adds a damage resistance debuff proc (50% chance) and a moderate Fire damage over time proc (75% chance) to most damaging attacks.",
         targets: 'Self',
         range: '0',
         radius: '0',
