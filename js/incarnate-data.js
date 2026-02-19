@@ -122,7 +122,7 @@ const IncarnateData = {
                     { name: 'Ion Judgement', desc: 'Targeted AoE, Extreme Energy damage with chain effect' },
                     { core: 'Ion Core Judgement', radial: 'Ion Radial Judgement', desc: 'Core: More chains | Radial: Larger radius' },
                     { core: 'Ion Total Core Judgement', radial: 'Ion Partial Radial Judgement', core2: 'Ion Partial Core Judgement', radial2: 'Ion Total Radial Judgement', desc: 'Core: Extended chains | Radial: Wider area +1 Level Shift' },
-                    { core: 'Ion Core Final Judgement', radial: 'Ion Radial Final Judgement', desc: 'Core: Maximum chains | Radial: Maximum radius' }
+                    { core: 'Ion Core Final Judgement', radial: 'Ion Radial Final Judgement', desc: 'Core: Additional damage to all foes | Radial: Chance to hold targets in electrical field' }
                 ]
             },
             Pyronic: {
